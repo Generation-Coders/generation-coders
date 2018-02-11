@@ -58,6 +58,36 @@
 .has-shadow {
   box-shadow: 0px 5px 34px -5px #7a7a7a; }
 
+.card-content {
+  padding: 0.6rem !important; }
+
+.card-image {
+  padding-bottom: 66.6666%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  height: auto; }
+
+.card-image-content {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  padding-bottom: 5px;
+  border-bottom: 2px solid white; }
+
+time {
+  font-size: 0.7rem !important; }
+
+.has-overlay {
+  background: linear-gradient(0deg, rgba(0, 61, 255, 0.5), rgba(0, 61, 255, 0.5)); }
+
 .hero-body h2 {
   font-weight: 300; }
 
@@ -93,7 +123,7 @@
 
 .drop-us-contact {
   display: inline-block;
-  border-bottom: 3px solid #7261EE !important; }
+  border-bottom: 3px solid #0435d6 !important; }
   .drop-us-contact p {
     margin-bottom: 2px; }
   .drop-us-contact:not(.subscribe) {
