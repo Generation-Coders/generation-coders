@@ -5,7 +5,23 @@
 @import "bulma/sass/utilities/initial-variables";
 @import "bulma/sass/utilities/functions";
 
+$family-serif: 'Open Sans', sans-serif;
+$navtext: #3c424f;
+$navtext-invert: #000;
+$danger: $orange;
+$primary: rgb(4, 53, 214);
+$family-primary: $family-serif;
+$gap: 128px;
+$secondary: rgb(247, 250, 255);
+$secondary-invert: #3c424f;
+$tertiary: #808080;
+$tertiary-invert: #fff;
+$footer-background-color: $primary;
+$black: rgb(45, 49, 66);
 
+.section p {
+	line-height: 1.8 !important;
+}
 .hero-foo {
 	@extend .hero;
 	background: linear-gradient(0deg,rgba(0, 61, 255,0.5),rgba(0, 61, 255,0.5)), url('img/hero.jpg');
@@ -16,7 +32,7 @@
 		font-weight: 500;
 	}
 }
-.hero-body .subtitle {
+.text-light {
 	font-weight: 300;
 }
 #nav {
@@ -30,6 +46,7 @@
     height: auto;
     background-color: #fff;    
     text-align: center;
+    box-shadow: 0px 5px 22px -5px rgba(122,122,122,0.1);
     ul {
 		list-style:none;
 		position:relative;
@@ -58,58 +75,68 @@
 		padding: 0 6%;
 	}
 }
+.has-light-shadow {
+	box-shadow: 0px 0px 32px 0px rgba(122,122,122,0.2);
+}
 
+.has-shadow {
+	box-shadow: 0px 5px 34px -5px rgba(122, 122, 122, 3.3);
+}
 
 .hero-body h2 {
 	font-weight: 300;
 }
+.is-horizontal-center {
+  margin: 0 auto;
+}
 
+.content.is-small {
+	padding-top: 0.9rem !important;
+	margin-bottom: 0 !important;
+}
 .sec-secondary {
 	background-color: #f4f8ff;
 }
 .sec-sub {
-	/*text-transform: uppercase;*/
 	font-weight: 600 !important;
 }
-#home-who-right {
-	max-width: 50%;
-    width: auto;
-    height: auto;
+
+.slider {
+	display: none;
+	&.active {
+		display: block !important;
+	}
 }
 
-#hero-img {
-	width: 100%;
-	box-shadow: 0 60px 54px 0 rgba(0, 0, 0, 0.16);
+.dot {
+	cursor:pointer;
+  	height: 15px;
+  	width: 15px;
+  	margin: 0 2px;
+  	background-color: #819aea;
+  	border-radius: 50%;
+ 	display: inline-block;
+  	transition: background-color 0.6s ease;
+	&.active, &:hover {
+		background-color: #1d49da !important;
+	}
 }
-
-
-.hero p {
-	font-weight: 300;
+.drop-us-contact {
+	display: inline-block;
+	border-bottom: 3px solid #7261EE !important;
+	p {
+		margin-bottom: 2px;
+	}
+	&:not(.subscribe) {
+		margin-bottom: 1.2rem;
+	}
 }
-$family-serif: 'Open Sans', sans-serif;
-$navtext: #3c424f;
-$navtext-invert: #000;
-$danger: $orange;
-$primary: rgb(4, 53, 214);
-$family-primary: $family-serif;
-$gap: 128px;
-$secondary: rgb(247, 250, 255);
-$secondary-invert: #3c424f;
-/*a.more{
-	box-shadow: 0rem 0.44rem 1.112rem 0rem rgba(114,208,235,0.24);
-	text-transform: uppercase;
-	font-weight: 500;
-	padding: 1.3em 0.75em;
-	margin-top: 2em;
-}
-a.more:hover {
-	background-color: #9cdef1 !important;
-}*/
 
 @import "bulma/sass/utilities/derived-variables.sass";
 $addColors: (
   "secondary": ($secondary, $secondary-invert),
-  "navtext": ($navtext, $navtext-invert)
+  "navtext": ($navtext, $navtext-invert),
+  "tertiary": ($tertiary, $tertiary-invert)
 );
 $colors: map-merge($colors, $addColors);
 
