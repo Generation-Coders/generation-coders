@@ -4,9 +4,9 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 /*$secondary: #f4f8ff;*/
 /*#1d49da !important*/
-.section p {
-  line-height: 1.8 !important; }
-
+/*.section p {
+	line-height: 1.8 !important;
+}*/
 .hero-foo {
   background: linear-gradient(0deg, rgba(0, 61, 255, 0.5), rgba(0, 61, 255, 0.5)), url("img/hero.jpg");
   background-repeat: no-repeat;
@@ -136,6 +136,30 @@ time {
   .drop-us-contact:not(.subscribe) {
     margin-bottom: 1.2rem; }
 
+.session-notification {
+  box-shadow: 0 2px 3px rgba(45, 49, 66, 0.1), 0 0 0 1px rgba(45, 49, 66, 0.1); }
+
+.session-date {
+  vertical-align: top; }
+
+.session-date-group {
+  display: inline-block;
+  vertical-align: top; }
+
+.session-day-number {
+  font-size: 1.7rem;
+  margin-right: 0.4rem; }
+
+.session-time {
+  line-height: 0.6; }
+
+.session-bottom-details {
+  border-top: 1px solid #dbdbdb; }
+  .session-bottom-details p {
+    font-size: 0.85rem; }
+  .session-bottom-details nav {
+    margin-top: 0.7em; }
+
 @keyframes spinAround {
   from {
     transform: rotate(0deg); }
@@ -250,7 +274,7 @@ body {
   color: #4a4a4a;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5; }
+  line-height: 1.8; }
 
 a {
   color: #3273dc;
