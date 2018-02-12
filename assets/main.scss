@@ -9,16 +9,17 @@ $family-serif: 'Open Sans', sans-serif;
 $navtext: #3c424f;
 $navtext-invert: #000;
 $danger: $orange;
-$primary: rgb(4, 53, 214);
+$primary: rgb(0, 61,255);
 $family-primary: $family-serif;
 $gap: 128px;
 $secondary: rgb(247, 250, 255);
+/*$secondary: #f4f8ff;*/
 $secondary-invert: #3c424f;
 $tertiary: #808080;
 $tertiary-invert: #fff;
 $footer-background-color: $primary;
 $black: rgb(45, 49, 66);
-
+/*#1d49da !important*/
 .section p {
 	line-height: 1.8 !important;
 }
@@ -81,6 +82,12 @@ $black: rgb(45, 49, 66);
 
 .has-shadow {
 	box-shadow: 0px 5px 34px -5px rgba(122, 122, 122, 3.3);
+}
+.big-icon-below {
+	font-weight: 600 !important;
+	margin-bottom: 0 !important;
+	margin-top: 1.5em;
+
 }
 .card-content {
 	padding: 0.6rem !important;
@@ -148,7 +155,7 @@ time {
  	display: inline-block;
   	transition: background-color 0.6s ease;
 	&.active, &:hover {
-		background-color: #1d49da !important;
+		background-color: $primary !important;
 	}
 }
 .drop-us-contact {
