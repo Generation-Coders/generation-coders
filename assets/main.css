@@ -15,6 +15,18 @@
   .hero-foo .subtitle a {
     font-weight: 500; }
 
+.hero-foo-reflection {
+  background: url("img/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /*.subtitle a {
+  	font-weight: 500;
+  }*/ }
+
+.reflection-below-hero .hero-body {
+  padding: 1.3rem 1.5rem 0.5rem 1.5rem !important; }
+
 .text-light {
   font-weight: 300; }
 
@@ -39,7 +51,7 @@
     #nav ul a {
       display: block;
       text-decoration: none;
-      line-height: 52px;
+      line-height: 63px;
       padding: 0 15px; }
     #nav ul li {
       position: relative;
@@ -49,9 +61,9 @@
   #nav .logo {
     position: relative;
     z-index: 6;
-    height: 3em;
+    height: 4em;
     float: left;
-    padding-top: 7px !important;
+    padding-top: 0px !important;
     padding: 0 6%; }
 
 .has-light-shadow {
@@ -65,9 +77,38 @@
   margin-bottom: 0 !important;
   margin-top: 1.5em; }
 
-.card-content {
+.card-overlay {
   padding: 0.6rem !important; }
 
+.reflection-subtitle {
+  font-size: 1rem;
+  font-weight: 600 !important; }
+
+.reflection-title {
+  font-size: 1.7rem;
+  font-weight: 600 !important;
+  line-height: 0.6; }
+
+.reflection-content {
+  padding: 1em 1.5rem; }
+
+/*.reflection-card {
+	padding: 1.5rem !important;
+}
+.reflection-title {
+	font-size: 2rem;
+    font-weight: 4100 !important;
+    line-height: 2;
+}
+.reflection-text {
+	    line-height: 1.4;
+   		margin: 0 5.5rem;
+	p {
+		line-height: 1.9;
+    	margin: 15px 0;
+    	font-size: 0.9rem;
+	}
+}*/
 .card-image {
   padding-bottom: 66.6666%;
   bottom: 0;
@@ -6540,672 +6581,737 @@ label.panel-block {
       flex: none;
       width: 100%; } }
 
-.hero, .hero-foo {
+.hero, .hero-foo, .hero-foo-reflection {
   align-items: stretch;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-  .hero .navbar, .hero-foo .navbar {
+  .hero .navbar, .hero-foo .navbar, .hero-foo-reflection .navbar {
     background: none; }
-  .hero .tabs ul, .hero-foo .tabs ul {
+  .hero .tabs ul, .hero-foo .tabs ul, .hero-foo-reflection .tabs ul {
     border-bottom: none; }
-  .hero.is-white, .is-white.hero-foo {
+  .hero.is-white, .is-white.hero-foo, .is-white.hero-foo-reflection {
     background-color: white;
     color: #2d3142; }
-    .hero.is-white a:not(.button):not(.dropdown-item):not(.tag), .is-white.hero-foo a:not(.button):not(.dropdown-item):not(.tag),
+    .hero.is-white a:not(.button):not(.dropdown-item):not(.tag), .is-white.hero-foo a:not(.button):not(.dropdown-item):not(.tag), .is-white.hero-foo-reflection a:not(.button):not(.dropdown-item):not(.tag),
     .hero.is-white strong,
-    .is-white.hero-foo strong {
+    .is-white.hero-foo strong,
+    .is-white.hero-foo-reflection strong {
       color: inherit; }
-    .hero.is-white .title, .is-white.hero-foo .title {
+    .hero.is-white .title, .is-white.hero-foo .title, .is-white.hero-foo-reflection .title {
       color: #2d3142; }
-    .hero.is-white .subtitle, .is-white.hero-foo .subtitle {
+    .hero.is-white .subtitle, .is-white.hero-foo .subtitle, .is-white.hero-foo-reflection .subtitle {
       color: rgba(45, 49, 66, 0.9); }
-      .hero.is-white .subtitle a:not(.button), .is-white.hero-foo .subtitle a:not(.button),
+      .hero.is-white .subtitle a:not(.button), .is-white.hero-foo .subtitle a:not(.button), .is-white.hero-foo-reflection .subtitle a:not(.button),
       .hero.is-white .subtitle strong,
-      .is-white.hero-foo .subtitle strong {
+      .is-white.hero-foo .subtitle strong,
+      .is-white.hero-foo-reflection .subtitle strong {
         color: #2d3142; }
     @media screen and (max-width: 1023px) {
-      .hero.is-white .navbar-menu, .is-white.hero-foo .navbar-menu {
+      .hero.is-white .navbar-menu, .is-white.hero-foo .navbar-menu, .is-white.hero-foo-reflection .navbar-menu {
         background-color: white; } }
-    .hero.is-white .navbar-item, .is-white.hero-foo .navbar-item,
+    .hero.is-white .navbar-item, .is-white.hero-foo .navbar-item, .is-white.hero-foo-reflection .navbar-item,
     .hero.is-white .navbar-link,
-    .is-white.hero-foo .navbar-link {
+    .is-white.hero-foo .navbar-link,
+    .is-white.hero-foo-reflection .navbar-link {
       color: rgba(45, 49, 66, 0.7); }
-    .hero.is-white a.navbar-item:hover, .is-white.hero-foo a.navbar-item:hover, .hero.is-white a.navbar-item.is-active, .is-white.hero-foo a.navbar-item.is-active,
+    .hero.is-white a.navbar-item:hover, .is-white.hero-foo a.navbar-item:hover, .is-white.hero-foo-reflection a.navbar-item:hover, .hero.is-white a.navbar-item.is-active, .is-white.hero-foo a.navbar-item.is-active, .is-white.hero-foo-reflection a.navbar-item.is-active,
     .hero.is-white .navbar-link:hover,
     .is-white.hero-foo .navbar-link:hover,
+    .is-white.hero-foo-reflection .navbar-link:hover,
     .hero.is-white .navbar-link.is-active,
-    .is-white.hero-foo .navbar-link.is-active {
+    .is-white.hero-foo .navbar-link.is-active,
+    .is-white.hero-foo-reflection .navbar-link.is-active {
       background-color: #f2f2f2;
       color: #2d3142; }
-    .hero.is-white .tabs a, .is-white.hero-foo .tabs a {
+    .hero.is-white .tabs a, .is-white.hero-foo .tabs a, .is-white.hero-foo-reflection .tabs a {
       color: #2d3142;
       opacity: 0.9; }
-      .hero.is-white .tabs a:hover, .is-white.hero-foo .tabs a:hover {
+      .hero.is-white .tabs a:hover, .is-white.hero-foo .tabs a:hover, .is-white.hero-foo-reflection .tabs a:hover {
         opacity: 1; }
-    .hero.is-white .tabs li.is-active a, .is-white.hero-foo .tabs li.is-active a {
+    .hero.is-white .tabs li.is-active a, .is-white.hero-foo .tabs li.is-active a, .is-white.hero-foo-reflection .tabs li.is-active a {
       opacity: 1; }
-    .hero.is-white .tabs.is-boxed a, .is-white.hero-foo .tabs.is-boxed a, .hero.is-white .tabs.is-toggle a, .is-white.hero-foo .tabs.is-toggle a {
+    .hero.is-white .tabs.is-boxed a, .is-white.hero-foo .tabs.is-boxed a, .is-white.hero-foo-reflection .tabs.is-boxed a, .hero.is-white .tabs.is-toggle a, .is-white.hero-foo .tabs.is-toggle a, .is-white.hero-foo-reflection .tabs.is-toggle a {
       color: #2d3142; }
-      .hero.is-white .tabs.is-boxed a:hover, .is-white.hero-foo .tabs.is-boxed a:hover, .hero.is-white .tabs.is-toggle a:hover, .is-white.hero-foo .tabs.is-toggle a:hover {
+      .hero.is-white .tabs.is-boxed a:hover, .is-white.hero-foo .tabs.is-boxed a:hover, .is-white.hero-foo-reflection .tabs.is-boxed a:hover, .hero.is-white .tabs.is-toggle a:hover, .is-white.hero-foo .tabs.is-toggle a:hover, .is-white.hero-foo-reflection .tabs.is-toggle a:hover {
         background-color: rgba(45, 49, 66, 0.1); }
-    .hero.is-white .tabs.is-boxed li.is-active a, .is-white.hero-foo .tabs.is-boxed li.is-active a, .hero.is-white .tabs.is-boxed li.is-active a:hover, .is-white.hero-foo .tabs.is-boxed li.is-active a:hover, .hero.is-white .tabs.is-toggle li.is-active a, .is-white.hero-foo .tabs.is-toggle li.is-active a, .hero.is-white .tabs.is-toggle li.is-active a:hover, .is-white.hero-foo .tabs.is-toggle li.is-active a:hover {
+    .hero.is-white .tabs.is-boxed li.is-active a, .is-white.hero-foo .tabs.is-boxed li.is-active a, .is-white.hero-foo-reflection .tabs.is-boxed li.is-active a, .hero.is-white .tabs.is-boxed li.is-active a:hover, .is-white.hero-foo .tabs.is-boxed li.is-active a:hover, .is-white.hero-foo-reflection .tabs.is-boxed li.is-active a:hover, .hero.is-white .tabs.is-toggle li.is-active a, .is-white.hero-foo .tabs.is-toggle li.is-active a, .is-white.hero-foo-reflection .tabs.is-toggle li.is-active a, .hero.is-white .tabs.is-toggle li.is-active a:hover, .is-white.hero-foo .tabs.is-toggle li.is-active a:hover, .is-white.hero-foo-reflection .tabs.is-toggle li.is-active a:hover {
       background-color: #2d3142;
       border-color: #2d3142;
       color: white; }
-    .hero.is-white.is-bold, .is-white.is-bold.hero-foo {
+    .hero.is-white.is-bold, .is-white.is-bold.hero-foo, .is-white.is-bold.hero-foo-reflection {
       background-image: linear-gradient(141deg, #e8e3e4 0%, white 71%, white 100%); }
       @media screen and (max-width: 768px) {
-        .hero.is-white.is-bold .navbar-menu, .is-white.is-bold.hero-foo .navbar-menu {
+        .hero.is-white.is-bold .navbar-menu, .is-white.is-bold.hero-foo .navbar-menu, .is-white.is-bold.hero-foo-reflection .navbar-menu {
           background-image: linear-gradient(141deg, #e8e3e4 0%, white 71%, white 100%); } }
-  .hero.is-black, .is-black.hero-foo {
+  .hero.is-black, .is-black.hero-foo, .is-black.hero-foo-reflection {
     background-color: #2d3142;
     color: white; }
-    .hero.is-black a:not(.button):not(.dropdown-item):not(.tag), .is-black.hero-foo a:not(.button):not(.dropdown-item):not(.tag),
+    .hero.is-black a:not(.button):not(.dropdown-item):not(.tag), .is-black.hero-foo a:not(.button):not(.dropdown-item):not(.tag), .is-black.hero-foo-reflection a:not(.button):not(.dropdown-item):not(.tag),
     .hero.is-black strong,
-    .is-black.hero-foo strong {
+    .is-black.hero-foo strong,
+    .is-black.hero-foo-reflection strong {
       color: inherit; }
-    .hero.is-black .title, .is-black.hero-foo .title {
+    .hero.is-black .title, .is-black.hero-foo .title, .is-black.hero-foo-reflection .title {
       color: white; }
-    .hero.is-black .subtitle, .is-black.hero-foo .subtitle {
+    .hero.is-black .subtitle, .is-black.hero-foo .subtitle, .is-black.hero-foo-reflection .subtitle {
       color: rgba(255, 255, 255, 0.9); }
-      .hero.is-black .subtitle a:not(.button), .is-black.hero-foo .subtitle a:not(.button),
+      .hero.is-black .subtitle a:not(.button), .is-black.hero-foo .subtitle a:not(.button), .is-black.hero-foo-reflection .subtitle a:not(.button),
       .hero.is-black .subtitle strong,
-      .is-black.hero-foo .subtitle strong {
+      .is-black.hero-foo .subtitle strong,
+      .is-black.hero-foo-reflection .subtitle strong {
         color: white; }
     @media screen and (max-width: 1023px) {
-      .hero.is-black .navbar-menu, .is-black.hero-foo .navbar-menu {
+      .hero.is-black .navbar-menu, .is-black.hero-foo .navbar-menu, .is-black.hero-foo-reflection .navbar-menu {
         background-color: #2d3142; } }
-    .hero.is-black .navbar-item, .is-black.hero-foo .navbar-item,
+    .hero.is-black .navbar-item, .is-black.hero-foo .navbar-item, .is-black.hero-foo-reflection .navbar-item,
     .hero.is-black .navbar-link,
-    .is-black.hero-foo .navbar-link {
+    .is-black.hero-foo .navbar-link,
+    .is-black.hero-foo-reflection .navbar-link {
       color: rgba(255, 255, 255, 0.7); }
-    .hero.is-black a.navbar-item:hover, .is-black.hero-foo a.navbar-item:hover, .hero.is-black a.navbar-item.is-active, .is-black.hero-foo a.navbar-item.is-active,
+    .hero.is-black a.navbar-item:hover, .is-black.hero-foo a.navbar-item:hover, .is-black.hero-foo-reflection a.navbar-item:hover, .hero.is-black a.navbar-item.is-active, .is-black.hero-foo a.navbar-item.is-active, .is-black.hero-foo-reflection a.navbar-item.is-active,
     .hero.is-black .navbar-link:hover,
     .is-black.hero-foo .navbar-link:hover,
+    .is-black.hero-foo-reflection .navbar-link:hover,
     .hero.is-black .navbar-link.is-active,
-    .is-black.hero-foo .navbar-link.is-active {
+    .is-black.hero-foo .navbar-link.is-active,
+    .is-black.hero-foo-reflection .navbar-link.is-active {
       background-color: #232633;
       color: white; }
-    .hero.is-black .tabs a, .is-black.hero-foo .tabs a {
+    .hero.is-black .tabs a, .is-black.hero-foo .tabs a, .is-black.hero-foo-reflection .tabs a {
       color: white;
       opacity: 0.9; }
-      .hero.is-black .tabs a:hover, .is-black.hero-foo .tabs a:hover {
+      .hero.is-black .tabs a:hover, .is-black.hero-foo .tabs a:hover, .is-black.hero-foo-reflection .tabs a:hover {
         opacity: 1; }
-    .hero.is-black .tabs li.is-active a, .is-black.hero-foo .tabs li.is-active a {
+    .hero.is-black .tabs li.is-active a, .is-black.hero-foo .tabs li.is-active a, .is-black.hero-foo-reflection .tabs li.is-active a {
       opacity: 1; }
-    .hero.is-black .tabs.is-boxed a, .is-black.hero-foo .tabs.is-boxed a, .hero.is-black .tabs.is-toggle a, .is-black.hero-foo .tabs.is-toggle a {
+    .hero.is-black .tabs.is-boxed a, .is-black.hero-foo .tabs.is-boxed a, .is-black.hero-foo-reflection .tabs.is-boxed a, .hero.is-black .tabs.is-toggle a, .is-black.hero-foo .tabs.is-toggle a, .is-black.hero-foo-reflection .tabs.is-toggle a {
       color: white; }
-      .hero.is-black .tabs.is-boxed a:hover, .is-black.hero-foo .tabs.is-boxed a:hover, .hero.is-black .tabs.is-toggle a:hover, .is-black.hero-foo .tabs.is-toggle a:hover {
+      .hero.is-black .tabs.is-boxed a:hover, .is-black.hero-foo .tabs.is-boxed a:hover, .is-black.hero-foo-reflection .tabs.is-boxed a:hover, .hero.is-black .tabs.is-toggle a:hover, .is-black.hero-foo .tabs.is-toggle a:hover, .is-black.hero-foo-reflection .tabs.is-toggle a:hover {
         background-color: rgba(45, 49, 66, 0.1); }
-    .hero.is-black .tabs.is-boxed li.is-active a, .is-black.hero-foo .tabs.is-boxed li.is-active a, .hero.is-black .tabs.is-boxed li.is-active a:hover, .is-black.hero-foo .tabs.is-boxed li.is-active a:hover, .hero.is-black .tabs.is-toggle li.is-active a, .is-black.hero-foo .tabs.is-toggle li.is-active a, .hero.is-black .tabs.is-toggle li.is-active a:hover, .is-black.hero-foo .tabs.is-toggle li.is-active a:hover {
+    .hero.is-black .tabs.is-boxed li.is-active a, .is-black.hero-foo .tabs.is-boxed li.is-active a, .is-black.hero-foo-reflection .tabs.is-boxed li.is-active a, .hero.is-black .tabs.is-boxed li.is-active a:hover, .is-black.hero-foo .tabs.is-boxed li.is-active a:hover, .is-black.hero-foo-reflection .tabs.is-boxed li.is-active a:hover, .hero.is-black .tabs.is-toggle li.is-active a, .is-black.hero-foo .tabs.is-toggle li.is-active a, .is-black.hero-foo-reflection .tabs.is-toggle li.is-active a, .hero.is-black .tabs.is-toggle li.is-active a:hover, .is-black.hero-foo .tabs.is-toggle li.is-active a:hover, .is-black.hero-foo-reflection .tabs.is-toggle li.is-active a:hover {
       background-color: white;
       border-color: white;
       color: #2d3142; }
-    .hero.is-black.is-bold, .is-black.is-bold.hero-foo {
+    .hero.is-black.is-bold, .is-black.is-bold.hero-foo, .is-black.is-bold.hero-foo-reflection {
       background-image: linear-gradient(141deg, #151c27 0%, #2d3142 71%, #343555 100%); }
       @media screen and (max-width: 768px) {
-        .hero.is-black.is-bold .navbar-menu, .is-black.is-bold.hero-foo .navbar-menu {
+        .hero.is-black.is-bold .navbar-menu, .is-black.is-bold.hero-foo .navbar-menu, .is-black.is-bold.hero-foo-reflection .navbar-menu {
           background-image: linear-gradient(141deg, #151c27 0%, #2d3142 71%, #343555 100%); } }
-  .hero.is-light, .is-light.hero-foo {
+  .hero.is-light, .is-light.hero-foo, .is-light.hero-foo-reflection {
     background-color: whitesmoke;
     color: #363636; }
-    .hero.is-light a:not(.button):not(.dropdown-item):not(.tag), .is-light.hero-foo a:not(.button):not(.dropdown-item):not(.tag),
+    .hero.is-light a:not(.button):not(.dropdown-item):not(.tag), .is-light.hero-foo a:not(.button):not(.dropdown-item):not(.tag), .is-light.hero-foo-reflection a:not(.button):not(.dropdown-item):not(.tag),
     .hero.is-light strong,
-    .is-light.hero-foo strong {
+    .is-light.hero-foo strong,
+    .is-light.hero-foo-reflection strong {
       color: inherit; }
-    .hero.is-light .title, .is-light.hero-foo .title {
+    .hero.is-light .title, .is-light.hero-foo .title, .is-light.hero-foo-reflection .title {
       color: #363636; }
-    .hero.is-light .subtitle, .is-light.hero-foo .subtitle {
+    .hero.is-light .subtitle, .is-light.hero-foo .subtitle, .is-light.hero-foo-reflection .subtitle {
       color: rgba(54, 54, 54, 0.9); }
-      .hero.is-light .subtitle a:not(.button), .is-light.hero-foo .subtitle a:not(.button),
+      .hero.is-light .subtitle a:not(.button), .is-light.hero-foo .subtitle a:not(.button), .is-light.hero-foo-reflection .subtitle a:not(.button),
       .hero.is-light .subtitle strong,
-      .is-light.hero-foo .subtitle strong {
+      .is-light.hero-foo .subtitle strong,
+      .is-light.hero-foo-reflection .subtitle strong {
         color: #363636; }
     @media screen and (max-width: 1023px) {
-      .hero.is-light .navbar-menu, .is-light.hero-foo .navbar-menu {
+      .hero.is-light .navbar-menu, .is-light.hero-foo .navbar-menu, .is-light.hero-foo-reflection .navbar-menu {
         background-color: whitesmoke; } }
-    .hero.is-light .navbar-item, .is-light.hero-foo .navbar-item,
+    .hero.is-light .navbar-item, .is-light.hero-foo .navbar-item, .is-light.hero-foo-reflection .navbar-item,
     .hero.is-light .navbar-link,
-    .is-light.hero-foo .navbar-link {
+    .is-light.hero-foo .navbar-link,
+    .is-light.hero-foo-reflection .navbar-link {
       color: rgba(54, 54, 54, 0.7); }
-    .hero.is-light a.navbar-item:hover, .is-light.hero-foo a.navbar-item:hover, .hero.is-light a.navbar-item.is-active, .is-light.hero-foo a.navbar-item.is-active,
+    .hero.is-light a.navbar-item:hover, .is-light.hero-foo a.navbar-item:hover, .is-light.hero-foo-reflection a.navbar-item:hover, .hero.is-light a.navbar-item.is-active, .is-light.hero-foo a.navbar-item.is-active, .is-light.hero-foo-reflection a.navbar-item.is-active,
     .hero.is-light .navbar-link:hover,
     .is-light.hero-foo .navbar-link:hover,
+    .is-light.hero-foo-reflection .navbar-link:hover,
     .hero.is-light .navbar-link.is-active,
-    .is-light.hero-foo .navbar-link.is-active {
+    .is-light.hero-foo .navbar-link.is-active,
+    .is-light.hero-foo-reflection .navbar-link.is-active {
       background-color: #e8e8e8;
       color: #363636; }
-    .hero.is-light .tabs a, .is-light.hero-foo .tabs a {
+    .hero.is-light .tabs a, .is-light.hero-foo .tabs a, .is-light.hero-foo-reflection .tabs a {
       color: #363636;
       opacity: 0.9; }
-      .hero.is-light .tabs a:hover, .is-light.hero-foo .tabs a:hover {
+      .hero.is-light .tabs a:hover, .is-light.hero-foo .tabs a:hover, .is-light.hero-foo-reflection .tabs a:hover {
         opacity: 1; }
-    .hero.is-light .tabs li.is-active a, .is-light.hero-foo .tabs li.is-active a {
+    .hero.is-light .tabs li.is-active a, .is-light.hero-foo .tabs li.is-active a, .is-light.hero-foo-reflection .tabs li.is-active a {
       opacity: 1; }
-    .hero.is-light .tabs.is-boxed a, .is-light.hero-foo .tabs.is-boxed a, .hero.is-light .tabs.is-toggle a, .is-light.hero-foo .tabs.is-toggle a {
+    .hero.is-light .tabs.is-boxed a, .is-light.hero-foo .tabs.is-boxed a, .is-light.hero-foo-reflection .tabs.is-boxed a, .hero.is-light .tabs.is-toggle a, .is-light.hero-foo .tabs.is-toggle a, .is-light.hero-foo-reflection .tabs.is-toggle a {
       color: #363636; }
-      .hero.is-light .tabs.is-boxed a:hover, .is-light.hero-foo .tabs.is-boxed a:hover, .hero.is-light .tabs.is-toggle a:hover, .is-light.hero-foo .tabs.is-toggle a:hover {
+      .hero.is-light .tabs.is-boxed a:hover, .is-light.hero-foo .tabs.is-boxed a:hover, .is-light.hero-foo-reflection .tabs.is-boxed a:hover, .hero.is-light .tabs.is-toggle a:hover, .is-light.hero-foo .tabs.is-toggle a:hover, .is-light.hero-foo-reflection .tabs.is-toggle a:hover {
         background-color: rgba(45, 49, 66, 0.1); }
-    .hero.is-light .tabs.is-boxed li.is-active a, .is-light.hero-foo .tabs.is-boxed li.is-active a, .hero.is-light .tabs.is-boxed li.is-active a:hover, .is-light.hero-foo .tabs.is-boxed li.is-active a:hover, .hero.is-light .tabs.is-toggle li.is-active a, .is-light.hero-foo .tabs.is-toggle li.is-active a, .hero.is-light .tabs.is-toggle li.is-active a:hover, .is-light.hero-foo .tabs.is-toggle li.is-active a:hover {
+    .hero.is-light .tabs.is-boxed li.is-active a, .is-light.hero-foo .tabs.is-boxed li.is-active a, .is-light.hero-foo-reflection .tabs.is-boxed li.is-active a, .hero.is-light .tabs.is-boxed li.is-active a:hover, .is-light.hero-foo .tabs.is-boxed li.is-active a:hover, .is-light.hero-foo-reflection .tabs.is-boxed li.is-active a:hover, .hero.is-light .tabs.is-toggle li.is-active a, .is-light.hero-foo .tabs.is-toggle li.is-active a, .is-light.hero-foo-reflection .tabs.is-toggle li.is-active a, .hero.is-light .tabs.is-toggle li.is-active a:hover, .is-light.hero-foo .tabs.is-toggle li.is-active a:hover, .is-light.hero-foo-reflection .tabs.is-toggle li.is-active a:hover {
       background-color: #363636;
       border-color: #363636;
       color: whitesmoke; }
-    .hero.is-light.is-bold, .is-light.is-bold.hero-foo {
+    .hero.is-light.is-bold, .is-light.is-bold.hero-foo, .is-light.is-bold.hero-foo-reflection {
       background-image: linear-gradient(141deg, #dfd8d9 0%, whitesmoke 71%, white 100%); }
       @media screen and (max-width: 768px) {
-        .hero.is-light.is-bold .navbar-menu, .is-light.is-bold.hero-foo .navbar-menu {
+        .hero.is-light.is-bold .navbar-menu, .is-light.is-bold.hero-foo .navbar-menu, .is-light.is-bold.hero-foo-reflection .navbar-menu {
           background-image: linear-gradient(141deg, #dfd8d9 0%, whitesmoke 71%, white 100%); } }
-  .hero.is-dark, .is-dark.hero-foo {
+  .hero.is-dark, .is-dark.hero-foo, .is-dark.hero-foo-reflection {
     background-color: #363636;
     color: whitesmoke; }
-    .hero.is-dark a:not(.button):not(.dropdown-item):not(.tag), .is-dark.hero-foo a:not(.button):not(.dropdown-item):not(.tag),
+    .hero.is-dark a:not(.button):not(.dropdown-item):not(.tag), .is-dark.hero-foo a:not(.button):not(.dropdown-item):not(.tag), .is-dark.hero-foo-reflection a:not(.button):not(.dropdown-item):not(.tag),
     .hero.is-dark strong,
-    .is-dark.hero-foo strong {
+    .is-dark.hero-foo strong,
+    .is-dark.hero-foo-reflection strong {
       color: inherit; }
-    .hero.is-dark .title, .is-dark.hero-foo .title {
+    .hero.is-dark .title, .is-dark.hero-foo .title, .is-dark.hero-foo-reflection .title {
       color: whitesmoke; }
-    .hero.is-dark .subtitle, .is-dark.hero-foo .subtitle {
+    .hero.is-dark .subtitle, .is-dark.hero-foo .subtitle, .is-dark.hero-foo-reflection .subtitle {
       color: rgba(245, 245, 245, 0.9); }
-      .hero.is-dark .subtitle a:not(.button), .is-dark.hero-foo .subtitle a:not(.button),
+      .hero.is-dark .subtitle a:not(.button), .is-dark.hero-foo .subtitle a:not(.button), .is-dark.hero-foo-reflection .subtitle a:not(.button),
       .hero.is-dark .subtitle strong,
-      .is-dark.hero-foo .subtitle strong {
+      .is-dark.hero-foo .subtitle strong,
+      .is-dark.hero-foo-reflection .subtitle strong {
         color: whitesmoke; }
     @media screen and (max-width: 1023px) {
-      .hero.is-dark .navbar-menu, .is-dark.hero-foo .navbar-menu {
+      .hero.is-dark .navbar-menu, .is-dark.hero-foo .navbar-menu, .is-dark.hero-foo-reflection .navbar-menu {
         background-color: #363636; } }
-    .hero.is-dark .navbar-item, .is-dark.hero-foo .navbar-item,
+    .hero.is-dark .navbar-item, .is-dark.hero-foo .navbar-item, .is-dark.hero-foo-reflection .navbar-item,
     .hero.is-dark .navbar-link,
-    .is-dark.hero-foo .navbar-link {
+    .is-dark.hero-foo .navbar-link,
+    .is-dark.hero-foo-reflection .navbar-link {
       color: rgba(245, 245, 245, 0.7); }
-    .hero.is-dark a.navbar-item:hover, .is-dark.hero-foo a.navbar-item:hover, .hero.is-dark a.navbar-item.is-active, .is-dark.hero-foo a.navbar-item.is-active,
+    .hero.is-dark a.navbar-item:hover, .is-dark.hero-foo a.navbar-item:hover, .is-dark.hero-foo-reflection a.navbar-item:hover, .hero.is-dark a.navbar-item.is-active, .is-dark.hero-foo a.navbar-item.is-active, .is-dark.hero-foo-reflection a.navbar-item.is-active,
     .hero.is-dark .navbar-link:hover,
     .is-dark.hero-foo .navbar-link:hover,
+    .is-dark.hero-foo-reflection .navbar-link:hover,
     .hero.is-dark .navbar-link.is-active,
-    .is-dark.hero-foo .navbar-link.is-active {
+    .is-dark.hero-foo .navbar-link.is-active,
+    .is-dark.hero-foo-reflection .navbar-link.is-active {
       background-color: #292929;
       color: whitesmoke; }
-    .hero.is-dark .tabs a, .is-dark.hero-foo .tabs a {
+    .hero.is-dark .tabs a, .is-dark.hero-foo .tabs a, .is-dark.hero-foo-reflection .tabs a {
       color: whitesmoke;
       opacity: 0.9; }
-      .hero.is-dark .tabs a:hover, .is-dark.hero-foo .tabs a:hover {
+      .hero.is-dark .tabs a:hover, .is-dark.hero-foo .tabs a:hover, .is-dark.hero-foo-reflection .tabs a:hover {
         opacity: 1; }
-    .hero.is-dark .tabs li.is-active a, .is-dark.hero-foo .tabs li.is-active a {
+    .hero.is-dark .tabs li.is-active a, .is-dark.hero-foo .tabs li.is-active a, .is-dark.hero-foo-reflection .tabs li.is-active a {
       opacity: 1; }
-    .hero.is-dark .tabs.is-boxed a, .is-dark.hero-foo .tabs.is-boxed a, .hero.is-dark .tabs.is-toggle a, .is-dark.hero-foo .tabs.is-toggle a {
+    .hero.is-dark .tabs.is-boxed a, .is-dark.hero-foo .tabs.is-boxed a, .is-dark.hero-foo-reflection .tabs.is-boxed a, .hero.is-dark .tabs.is-toggle a, .is-dark.hero-foo .tabs.is-toggle a, .is-dark.hero-foo-reflection .tabs.is-toggle a {
       color: whitesmoke; }
-      .hero.is-dark .tabs.is-boxed a:hover, .is-dark.hero-foo .tabs.is-boxed a:hover, .hero.is-dark .tabs.is-toggle a:hover, .is-dark.hero-foo .tabs.is-toggle a:hover {
+      .hero.is-dark .tabs.is-boxed a:hover, .is-dark.hero-foo .tabs.is-boxed a:hover, .is-dark.hero-foo-reflection .tabs.is-boxed a:hover, .hero.is-dark .tabs.is-toggle a:hover, .is-dark.hero-foo .tabs.is-toggle a:hover, .is-dark.hero-foo-reflection .tabs.is-toggle a:hover {
         background-color: rgba(45, 49, 66, 0.1); }
-    .hero.is-dark .tabs.is-boxed li.is-active a, .is-dark.hero-foo .tabs.is-boxed li.is-active a, .hero.is-dark .tabs.is-boxed li.is-active a:hover, .is-dark.hero-foo .tabs.is-boxed li.is-active a:hover, .hero.is-dark .tabs.is-toggle li.is-active a, .is-dark.hero-foo .tabs.is-toggle li.is-active a, .hero.is-dark .tabs.is-toggle li.is-active a:hover, .is-dark.hero-foo .tabs.is-toggle li.is-active a:hover {
+    .hero.is-dark .tabs.is-boxed li.is-active a, .is-dark.hero-foo .tabs.is-boxed li.is-active a, .is-dark.hero-foo-reflection .tabs.is-boxed li.is-active a, .hero.is-dark .tabs.is-boxed li.is-active a:hover, .is-dark.hero-foo .tabs.is-boxed li.is-active a:hover, .is-dark.hero-foo-reflection .tabs.is-boxed li.is-active a:hover, .hero.is-dark .tabs.is-toggle li.is-active a, .is-dark.hero-foo .tabs.is-toggle li.is-active a, .is-dark.hero-foo-reflection .tabs.is-toggle li.is-active a, .hero.is-dark .tabs.is-toggle li.is-active a:hover, .is-dark.hero-foo .tabs.is-toggle li.is-active a:hover, .is-dark.hero-foo-reflection .tabs.is-toggle li.is-active a:hover {
       background-color: whitesmoke;
       border-color: whitesmoke;
       color: #363636; }
-    .hero.is-dark.is-bold, .is-dark.is-bold.hero-foo {
+    .hero.is-dark.is-bold, .is-dark.is-bold.hero-foo, .is-dark.is-bold.hero-foo-reflection {
       background-image: linear-gradient(141deg, #1f191a 0%, #363636 71%, #46403f 100%); }
       @media screen and (max-width: 768px) {
-        .hero.is-dark.is-bold .navbar-menu, .is-dark.is-bold.hero-foo .navbar-menu {
+        .hero.is-dark.is-bold .navbar-menu, .is-dark.is-bold.hero-foo .navbar-menu, .is-dark.is-bold.hero-foo-reflection .navbar-menu {
           background-image: linear-gradient(141deg, #1f191a 0%, #363636 71%, #46403f 100%); } }
-  .hero.is-primary, .is-primary.hero-foo {
+  .hero.is-primary, .is-primary.hero-foo, .is-primary.hero-foo-reflection {
     background-color: #003dff;
     color: #fff; }
-    .hero.is-primary a:not(.button):not(.dropdown-item):not(.tag), .is-primary.hero-foo a:not(.button):not(.dropdown-item):not(.tag),
+    .hero.is-primary a:not(.button):not(.dropdown-item):not(.tag), .is-primary.hero-foo a:not(.button):not(.dropdown-item):not(.tag), .is-primary.hero-foo-reflection a:not(.button):not(.dropdown-item):not(.tag),
     .hero.is-primary strong,
-    .is-primary.hero-foo strong {
+    .is-primary.hero-foo strong,
+    .is-primary.hero-foo-reflection strong {
       color: inherit; }
-    .hero.is-primary .title, .is-primary.hero-foo .title {
+    .hero.is-primary .title, .is-primary.hero-foo .title, .is-primary.hero-foo-reflection .title {
       color: #fff; }
-    .hero.is-primary .subtitle, .is-primary.hero-foo .subtitle {
+    .hero.is-primary .subtitle, .is-primary.hero-foo .subtitle, .is-primary.hero-foo-reflection .subtitle {
       color: rgba(255, 255, 255, 0.9); }
-      .hero.is-primary .subtitle a:not(.button), .is-primary.hero-foo .subtitle a:not(.button),
+      .hero.is-primary .subtitle a:not(.button), .is-primary.hero-foo .subtitle a:not(.button), .is-primary.hero-foo-reflection .subtitle a:not(.button),
       .hero.is-primary .subtitle strong,
-      .is-primary.hero-foo .subtitle strong {
+      .is-primary.hero-foo .subtitle strong,
+      .is-primary.hero-foo-reflection .subtitle strong {
         color: #fff; }
     @media screen and (max-width: 1023px) {
-      .hero.is-primary .navbar-menu, .is-primary.hero-foo .navbar-menu {
+      .hero.is-primary .navbar-menu, .is-primary.hero-foo .navbar-menu, .is-primary.hero-foo-reflection .navbar-menu {
         background-color: #003dff; } }
-    .hero.is-primary .navbar-item, .is-primary.hero-foo .navbar-item,
+    .hero.is-primary .navbar-item, .is-primary.hero-foo .navbar-item, .is-primary.hero-foo-reflection .navbar-item,
     .hero.is-primary .navbar-link,
-    .is-primary.hero-foo .navbar-link {
+    .is-primary.hero-foo .navbar-link,
+    .is-primary.hero-foo-reflection .navbar-link {
       color: rgba(255, 255, 255, 0.7); }
-    .hero.is-primary a.navbar-item:hover, .is-primary.hero-foo a.navbar-item:hover, .hero.is-primary a.navbar-item.is-active, .is-primary.hero-foo a.navbar-item.is-active,
+    .hero.is-primary a.navbar-item:hover, .is-primary.hero-foo a.navbar-item:hover, .is-primary.hero-foo-reflection a.navbar-item:hover, .hero.is-primary a.navbar-item.is-active, .is-primary.hero-foo a.navbar-item.is-active, .is-primary.hero-foo-reflection a.navbar-item.is-active,
     .hero.is-primary .navbar-link:hover,
     .is-primary.hero-foo .navbar-link:hover,
+    .is-primary.hero-foo-reflection .navbar-link:hover,
     .hero.is-primary .navbar-link.is-active,
-    .is-primary.hero-foo .navbar-link.is-active {
+    .is-primary.hero-foo .navbar-link.is-active,
+    .is-primary.hero-foo-reflection .navbar-link.is-active {
       background-color: #0037e6;
       color: #fff; }
-    .hero.is-primary .tabs a, .is-primary.hero-foo .tabs a {
+    .hero.is-primary .tabs a, .is-primary.hero-foo .tabs a, .is-primary.hero-foo-reflection .tabs a {
       color: #fff;
       opacity: 0.9; }
-      .hero.is-primary .tabs a:hover, .is-primary.hero-foo .tabs a:hover {
+      .hero.is-primary .tabs a:hover, .is-primary.hero-foo .tabs a:hover, .is-primary.hero-foo-reflection .tabs a:hover {
         opacity: 1; }
-    .hero.is-primary .tabs li.is-active a, .is-primary.hero-foo .tabs li.is-active a {
+    .hero.is-primary .tabs li.is-active a, .is-primary.hero-foo .tabs li.is-active a, .is-primary.hero-foo-reflection .tabs li.is-active a {
       opacity: 1; }
-    .hero.is-primary .tabs.is-boxed a, .is-primary.hero-foo .tabs.is-boxed a, .hero.is-primary .tabs.is-toggle a, .is-primary.hero-foo .tabs.is-toggle a {
+    .hero.is-primary .tabs.is-boxed a, .is-primary.hero-foo .tabs.is-boxed a, .is-primary.hero-foo-reflection .tabs.is-boxed a, .hero.is-primary .tabs.is-toggle a, .is-primary.hero-foo .tabs.is-toggle a, .is-primary.hero-foo-reflection .tabs.is-toggle a {
       color: #fff; }
-      .hero.is-primary .tabs.is-boxed a:hover, .is-primary.hero-foo .tabs.is-boxed a:hover, .hero.is-primary .tabs.is-toggle a:hover, .is-primary.hero-foo .tabs.is-toggle a:hover {
+      .hero.is-primary .tabs.is-boxed a:hover, .is-primary.hero-foo .tabs.is-boxed a:hover, .is-primary.hero-foo-reflection .tabs.is-boxed a:hover, .hero.is-primary .tabs.is-toggle a:hover, .is-primary.hero-foo .tabs.is-toggle a:hover, .is-primary.hero-foo-reflection .tabs.is-toggle a:hover {
         background-color: rgba(45, 49, 66, 0.1); }
-    .hero.is-primary .tabs.is-boxed li.is-active a, .is-primary.hero-foo .tabs.is-boxed li.is-active a, .hero.is-primary .tabs.is-boxed li.is-active a:hover, .is-primary.hero-foo .tabs.is-boxed li.is-active a:hover, .hero.is-primary .tabs.is-toggle li.is-active a, .is-primary.hero-foo .tabs.is-toggle li.is-active a, .hero.is-primary .tabs.is-toggle li.is-active a:hover, .is-primary.hero-foo .tabs.is-toggle li.is-active a:hover {
+    .hero.is-primary .tabs.is-boxed li.is-active a, .is-primary.hero-foo .tabs.is-boxed li.is-active a, .is-primary.hero-foo-reflection .tabs.is-boxed li.is-active a, .hero.is-primary .tabs.is-boxed li.is-active a:hover, .is-primary.hero-foo .tabs.is-boxed li.is-active a:hover, .is-primary.hero-foo-reflection .tabs.is-boxed li.is-active a:hover, .hero.is-primary .tabs.is-toggle li.is-active a, .is-primary.hero-foo .tabs.is-toggle li.is-active a, .is-primary.hero-foo-reflection .tabs.is-toggle li.is-active a, .hero.is-primary .tabs.is-toggle li.is-active a:hover, .is-primary.hero-foo .tabs.is-toggle li.is-active a:hover, .is-primary.hero-foo-reflection .tabs.is-toggle li.is-active a:hover {
       background-color: #fff;
       border-color: #fff;
       color: #003dff; }
-    .hero.is-primary.is-bold, .is-primary.is-bold.hero-foo {
+    .hero.is-primary.is-bold, .is-primary.is-bold.hero-foo, .is-primary.is-bold.hero-foo-reflection {
       background-image: linear-gradient(141deg, #0053cc 0%, #003dff 71%, #1a2aff 100%); }
       @media screen and (max-width: 768px) {
-        .hero.is-primary.is-bold .navbar-menu, .is-primary.is-bold.hero-foo .navbar-menu {
+        .hero.is-primary.is-bold .navbar-menu, .is-primary.is-bold.hero-foo .navbar-menu, .is-primary.is-bold.hero-foo-reflection .navbar-menu {
           background-image: linear-gradient(141deg, #0053cc 0%, #003dff 71%, #1a2aff 100%); } }
-  .hero.is-link, .is-link.hero-foo {
+  .hero.is-link, .is-link.hero-foo, .is-link.hero-foo-reflection {
     background-color: #3273dc;
     color: #fff; }
-    .hero.is-link a:not(.button):not(.dropdown-item):not(.tag), .is-link.hero-foo a:not(.button):not(.dropdown-item):not(.tag),
+    .hero.is-link a:not(.button):not(.dropdown-item):not(.tag), .is-link.hero-foo a:not(.button):not(.dropdown-item):not(.tag), .is-link.hero-foo-reflection a:not(.button):not(.dropdown-item):not(.tag),
     .hero.is-link strong,
-    .is-link.hero-foo strong {
+    .is-link.hero-foo strong,
+    .is-link.hero-foo-reflection strong {
       color: inherit; }
-    .hero.is-link .title, .is-link.hero-foo .title {
+    .hero.is-link .title, .is-link.hero-foo .title, .is-link.hero-foo-reflection .title {
       color: #fff; }
-    .hero.is-link .subtitle, .is-link.hero-foo .subtitle {
+    .hero.is-link .subtitle, .is-link.hero-foo .subtitle, .is-link.hero-foo-reflection .subtitle {
       color: rgba(255, 255, 255, 0.9); }
-      .hero.is-link .subtitle a:not(.button), .is-link.hero-foo .subtitle a:not(.button),
+      .hero.is-link .subtitle a:not(.button), .is-link.hero-foo .subtitle a:not(.button), .is-link.hero-foo-reflection .subtitle a:not(.button),
       .hero.is-link .subtitle strong,
-      .is-link.hero-foo .subtitle strong {
+      .is-link.hero-foo .subtitle strong,
+      .is-link.hero-foo-reflection .subtitle strong {
         color: #fff; }
     @media screen and (max-width: 1023px) {
-      .hero.is-link .navbar-menu, .is-link.hero-foo .navbar-menu {
+      .hero.is-link .navbar-menu, .is-link.hero-foo .navbar-menu, .is-link.hero-foo-reflection .navbar-menu {
         background-color: #3273dc; } }
-    .hero.is-link .navbar-item, .is-link.hero-foo .navbar-item,
+    .hero.is-link .navbar-item, .is-link.hero-foo .navbar-item, .is-link.hero-foo-reflection .navbar-item,
     .hero.is-link .navbar-link,
-    .is-link.hero-foo .navbar-link {
+    .is-link.hero-foo .navbar-link,
+    .is-link.hero-foo-reflection .navbar-link {
       color: rgba(255, 255, 255, 0.7); }
-    .hero.is-link a.navbar-item:hover, .is-link.hero-foo a.navbar-item:hover, .hero.is-link a.navbar-item.is-active, .is-link.hero-foo a.navbar-item.is-active,
+    .hero.is-link a.navbar-item:hover, .is-link.hero-foo a.navbar-item:hover, .is-link.hero-foo-reflection a.navbar-item:hover, .hero.is-link a.navbar-item.is-active, .is-link.hero-foo a.navbar-item.is-active, .is-link.hero-foo-reflection a.navbar-item.is-active,
     .hero.is-link .navbar-link:hover,
     .is-link.hero-foo .navbar-link:hover,
+    .is-link.hero-foo-reflection .navbar-link:hover,
     .hero.is-link .navbar-link.is-active,
-    .is-link.hero-foo .navbar-link.is-active {
+    .is-link.hero-foo .navbar-link.is-active,
+    .is-link.hero-foo-reflection .navbar-link.is-active {
       background-color: #2366d1;
       color: #fff; }
-    .hero.is-link .tabs a, .is-link.hero-foo .tabs a {
+    .hero.is-link .tabs a, .is-link.hero-foo .tabs a, .is-link.hero-foo-reflection .tabs a {
       color: #fff;
       opacity: 0.9; }
-      .hero.is-link .tabs a:hover, .is-link.hero-foo .tabs a:hover {
+      .hero.is-link .tabs a:hover, .is-link.hero-foo .tabs a:hover, .is-link.hero-foo-reflection .tabs a:hover {
         opacity: 1; }
-    .hero.is-link .tabs li.is-active a, .is-link.hero-foo .tabs li.is-active a {
+    .hero.is-link .tabs li.is-active a, .is-link.hero-foo .tabs li.is-active a, .is-link.hero-foo-reflection .tabs li.is-active a {
       opacity: 1; }
-    .hero.is-link .tabs.is-boxed a, .is-link.hero-foo .tabs.is-boxed a, .hero.is-link .tabs.is-toggle a, .is-link.hero-foo .tabs.is-toggle a {
+    .hero.is-link .tabs.is-boxed a, .is-link.hero-foo .tabs.is-boxed a, .is-link.hero-foo-reflection .tabs.is-boxed a, .hero.is-link .tabs.is-toggle a, .is-link.hero-foo .tabs.is-toggle a, .is-link.hero-foo-reflection .tabs.is-toggle a {
       color: #fff; }
-      .hero.is-link .tabs.is-boxed a:hover, .is-link.hero-foo .tabs.is-boxed a:hover, .hero.is-link .tabs.is-toggle a:hover, .is-link.hero-foo .tabs.is-toggle a:hover {
+      .hero.is-link .tabs.is-boxed a:hover, .is-link.hero-foo .tabs.is-boxed a:hover, .is-link.hero-foo-reflection .tabs.is-boxed a:hover, .hero.is-link .tabs.is-toggle a:hover, .is-link.hero-foo .tabs.is-toggle a:hover, .is-link.hero-foo-reflection .tabs.is-toggle a:hover {
         background-color: rgba(45, 49, 66, 0.1); }
-    .hero.is-link .tabs.is-boxed li.is-active a, .is-link.hero-foo .tabs.is-boxed li.is-active a, .hero.is-link .tabs.is-boxed li.is-active a:hover, .is-link.hero-foo .tabs.is-boxed li.is-active a:hover, .hero.is-link .tabs.is-toggle li.is-active a, .is-link.hero-foo .tabs.is-toggle li.is-active a, .hero.is-link .tabs.is-toggle li.is-active a:hover, .is-link.hero-foo .tabs.is-toggle li.is-active a:hover {
+    .hero.is-link .tabs.is-boxed li.is-active a, .is-link.hero-foo .tabs.is-boxed li.is-active a, .is-link.hero-foo-reflection .tabs.is-boxed li.is-active a, .hero.is-link .tabs.is-boxed li.is-active a:hover, .is-link.hero-foo .tabs.is-boxed li.is-active a:hover, .is-link.hero-foo-reflection .tabs.is-boxed li.is-active a:hover, .hero.is-link .tabs.is-toggle li.is-active a, .is-link.hero-foo .tabs.is-toggle li.is-active a, .is-link.hero-foo-reflection .tabs.is-toggle li.is-active a, .hero.is-link .tabs.is-toggle li.is-active a:hover, .is-link.hero-foo .tabs.is-toggle li.is-active a:hover, .is-link.hero-foo-reflection .tabs.is-toggle li.is-active a:hover {
       background-color: #fff;
       border-color: #fff;
       color: #3273dc; }
-    .hero.is-link.is-bold, .is-link.is-bold.hero-foo {
+    .hero.is-link.is-bold, .is-link.is-bold.hero-foo, .is-link.is-bold.hero-foo-reflection {
       background-image: linear-gradient(141deg, #1577c6 0%, #3273dc 71%, #4366e5 100%); }
       @media screen and (max-width: 768px) {
-        .hero.is-link.is-bold .navbar-menu, .is-link.is-bold.hero-foo .navbar-menu {
+        .hero.is-link.is-bold .navbar-menu, .is-link.is-bold.hero-foo .navbar-menu, .is-link.is-bold.hero-foo-reflection .navbar-menu {
           background-image: linear-gradient(141deg, #1577c6 0%, #3273dc 71%, #4366e5 100%); } }
-  .hero.is-info, .is-info.hero-foo {
+  .hero.is-info, .is-info.hero-foo, .is-info.hero-foo-reflection {
     background-color: #209cee;
     color: #fff; }
-    .hero.is-info a:not(.button):not(.dropdown-item):not(.tag), .is-info.hero-foo a:not(.button):not(.dropdown-item):not(.tag),
+    .hero.is-info a:not(.button):not(.dropdown-item):not(.tag), .is-info.hero-foo a:not(.button):not(.dropdown-item):not(.tag), .is-info.hero-foo-reflection a:not(.button):not(.dropdown-item):not(.tag),
     .hero.is-info strong,
-    .is-info.hero-foo strong {
+    .is-info.hero-foo strong,
+    .is-info.hero-foo-reflection strong {
       color: inherit; }
-    .hero.is-info .title, .is-info.hero-foo .title {
+    .hero.is-info .title, .is-info.hero-foo .title, .is-info.hero-foo-reflection .title {
       color: #fff; }
-    .hero.is-info .subtitle, .is-info.hero-foo .subtitle {
+    .hero.is-info .subtitle, .is-info.hero-foo .subtitle, .is-info.hero-foo-reflection .subtitle {
       color: rgba(255, 255, 255, 0.9); }
-      .hero.is-info .subtitle a:not(.button), .is-info.hero-foo .subtitle a:not(.button),
+      .hero.is-info .subtitle a:not(.button), .is-info.hero-foo .subtitle a:not(.button), .is-info.hero-foo-reflection .subtitle a:not(.button),
       .hero.is-info .subtitle strong,
-      .is-info.hero-foo .subtitle strong {
+      .is-info.hero-foo .subtitle strong,
+      .is-info.hero-foo-reflection .subtitle strong {
         color: #fff; }
     @media screen and (max-width: 1023px) {
-      .hero.is-info .navbar-menu, .is-info.hero-foo .navbar-menu {
+      .hero.is-info .navbar-menu, .is-info.hero-foo .navbar-menu, .is-info.hero-foo-reflection .navbar-menu {
         background-color: #209cee; } }
-    .hero.is-info .navbar-item, .is-info.hero-foo .navbar-item,
+    .hero.is-info .navbar-item, .is-info.hero-foo .navbar-item, .is-info.hero-foo-reflection .navbar-item,
     .hero.is-info .navbar-link,
-    .is-info.hero-foo .navbar-link {
+    .is-info.hero-foo .navbar-link,
+    .is-info.hero-foo-reflection .navbar-link {
       color: rgba(255, 255, 255, 0.7); }
-    .hero.is-info a.navbar-item:hover, .is-info.hero-foo a.navbar-item:hover, .hero.is-info a.navbar-item.is-active, .is-info.hero-foo a.navbar-item.is-active,
+    .hero.is-info a.navbar-item:hover, .is-info.hero-foo a.navbar-item:hover, .is-info.hero-foo-reflection a.navbar-item:hover, .hero.is-info a.navbar-item.is-active, .is-info.hero-foo a.navbar-item.is-active, .is-info.hero-foo-reflection a.navbar-item.is-active,
     .hero.is-info .navbar-link:hover,
     .is-info.hero-foo .navbar-link:hover,
+    .is-info.hero-foo-reflection .navbar-link:hover,
     .hero.is-info .navbar-link.is-active,
-    .is-info.hero-foo .navbar-link.is-active {
+    .is-info.hero-foo .navbar-link.is-active,
+    .is-info.hero-foo-reflection .navbar-link.is-active {
       background-color: #118fe4;
       color: #fff; }
-    .hero.is-info .tabs a, .is-info.hero-foo .tabs a {
+    .hero.is-info .tabs a, .is-info.hero-foo .tabs a, .is-info.hero-foo-reflection .tabs a {
       color: #fff;
       opacity: 0.9; }
-      .hero.is-info .tabs a:hover, .is-info.hero-foo .tabs a:hover {
+      .hero.is-info .tabs a:hover, .is-info.hero-foo .tabs a:hover, .is-info.hero-foo-reflection .tabs a:hover {
         opacity: 1; }
-    .hero.is-info .tabs li.is-active a, .is-info.hero-foo .tabs li.is-active a {
+    .hero.is-info .tabs li.is-active a, .is-info.hero-foo .tabs li.is-active a, .is-info.hero-foo-reflection .tabs li.is-active a {
       opacity: 1; }
-    .hero.is-info .tabs.is-boxed a, .is-info.hero-foo .tabs.is-boxed a, .hero.is-info .tabs.is-toggle a, .is-info.hero-foo .tabs.is-toggle a {
+    .hero.is-info .tabs.is-boxed a, .is-info.hero-foo .tabs.is-boxed a, .is-info.hero-foo-reflection .tabs.is-boxed a, .hero.is-info .tabs.is-toggle a, .is-info.hero-foo .tabs.is-toggle a, .is-info.hero-foo-reflection .tabs.is-toggle a {
       color: #fff; }
-      .hero.is-info .tabs.is-boxed a:hover, .is-info.hero-foo .tabs.is-boxed a:hover, .hero.is-info .tabs.is-toggle a:hover, .is-info.hero-foo .tabs.is-toggle a:hover {
+      .hero.is-info .tabs.is-boxed a:hover, .is-info.hero-foo .tabs.is-boxed a:hover, .is-info.hero-foo-reflection .tabs.is-boxed a:hover, .hero.is-info .tabs.is-toggle a:hover, .is-info.hero-foo .tabs.is-toggle a:hover, .is-info.hero-foo-reflection .tabs.is-toggle a:hover {
         background-color: rgba(45, 49, 66, 0.1); }
-    .hero.is-info .tabs.is-boxed li.is-active a, .is-info.hero-foo .tabs.is-boxed li.is-active a, .hero.is-info .tabs.is-boxed li.is-active a:hover, .is-info.hero-foo .tabs.is-boxed li.is-active a:hover, .hero.is-info .tabs.is-toggle li.is-active a, .is-info.hero-foo .tabs.is-toggle li.is-active a, .hero.is-info .tabs.is-toggle li.is-active a:hover, .is-info.hero-foo .tabs.is-toggle li.is-active a:hover {
+    .hero.is-info .tabs.is-boxed li.is-active a, .is-info.hero-foo .tabs.is-boxed li.is-active a, .is-info.hero-foo-reflection .tabs.is-boxed li.is-active a, .hero.is-info .tabs.is-boxed li.is-active a:hover, .is-info.hero-foo .tabs.is-boxed li.is-active a:hover, .is-info.hero-foo-reflection .tabs.is-boxed li.is-active a:hover, .hero.is-info .tabs.is-toggle li.is-active a, .is-info.hero-foo .tabs.is-toggle li.is-active a, .is-info.hero-foo-reflection .tabs.is-toggle li.is-active a, .hero.is-info .tabs.is-toggle li.is-active a:hover, .is-info.hero-foo .tabs.is-toggle li.is-active a:hover, .is-info.hero-foo-reflection .tabs.is-toggle li.is-active a:hover {
       background-color: #fff;
       border-color: #fff;
       color: #209cee; }
-    .hero.is-info.is-bold, .is-info.is-bold.hero-foo {
+    .hero.is-info.is-bold, .is-info.is-bold.hero-foo, .is-info.is-bold.hero-foo-reflection {
       background-image: linear-gradient(141deg, #04a6d7 0%, #209cee 71%, #3287f5 100%); }
       @media screen and (max-width: 768px) {
-        .hero.is-info.is-bold .navbar-menu, .is-info.is-bold.hero-foo .navbar-menu {
+        .hero.is-info.is-bold .navbar-menu, .is-info.is-bold.hero-foo .navbar-menu, .is-info.is-bold.hero-foo-reflection .navbar-menu {
           background-image: linear-gradient(141deg, #04a6d7 0%, #209cee 71%, #3287f5 100%); } }
-  .hero.is-success, .is-success.hero-foo {
+  .hero.is-success, .is-success.hero-foo, .is-success.hero-foo-reflection {
     background-color: #23d160;
     color: #fff; }
-    .hero.is-success a:not(.button):not(.dropdown-item):not(.tag), .is-success.hero-foo a:not(.button):not(.dropdown-item):not(.tag),
+    .hero.is-success a:not(.button):not(.dropdown-item):not(.tag), .is-success.hero-foo a:not(.button):not(.dropdown-item):not(.tag), .is-success.hero-foo-reflection a:not(.button):not(.dropdown-item):not(.tag),
     .hero.is-success strong,
-    .is-success.hero-foo strong {
+    .is-success.hero-foo strong,
+    .is-success.hero-foo-reflection strong {
       color: inherit; }
-    .hero.is-success .title, .is-success.hero-foo .title {
+    .hero.is-success .title, .is-success.hero-foo .title, .is-success.hero-foo-reflection .title {
       color: #fff; }
-    .hero.is-success .subtitle, .is-success.hero-foo .subtitle {
+    .hero.is-success .subtitle, .is-success.hero-foo .subtitle, .is-success.hero-foo-reflection .subtitle {
       color: rgba(255, 255, 255, 0.9); }
-      .hero.is-success .subtitle a:not(.button), .is-success.hero-foo .subtitle a:not(.button),
+      .hero.is-success .subtitle a:not(.button), .is-success.hero-foo .subtitle a:not(.button), .is-success.hero-foo-reflection .subtitle a:not(.button),
       .hero.is-success .subtitle strong,
-      .is-success.hero-foo .subtitle strong {
+      .is-success.hero-foo .subtitle strong,
+      .is-success.hero-foo-reflection .subtitle strong {
         color: #fff; }
     @media screen and (max-width: 1023px) {
-      .hero.is-success .navbar-menu, .is-success.hero-foo .navbar-menu {
+      .hero.is-success .navbar-menu, .is-success.hero-foo .navbar-menu, .is-success.hero-foo-reflection .navbar-menu {
         background-color: #23d160; } }
-    .hero.is-success .navbar-item, .is-success.hero-foo .navbar-item,
+    .hero.is-success .navbar-item, .is-success.hero-foo .navbar-item, .is-success.hero-foo-reflection .navbar-item,
     .hero.is-success .navbar-link,
-    .is-success.hero-foo .navbar-link {
+    .is-success.hero-foo .navbar-link,
+    .is-success.hero-foo-reflection .navbar-link {
       color: rgba(255, 255, 255, 0.7); }
-    .hero.is-success a.navbar-item:hover, .is-success.hero-foo a.navbar-item:hover, .hero.is-success a.navbar-item.is-active, .is-success.hero-foo a.navbar-item.is-active,
+    .hero.is-success a.navbar-item:hover, .is-success.hero-foo a.navbar-item:hover, .is-success.hero-foo-reflection a.navbar-item:hover, .hero.is-success a.navbar-item.is-active, .is-success.hero-foo a.navbar-item.is-active, .is-success.hero-foo-reflection a.navbar-item.is-active,
     .hero.is-success .navbar-link:hover,
     .is-success.hero-foo .navbar-link:hover,
+    .is-success.hero-foo-reflection .navbar-link:hover,
     .hero.is-success .navbar-link.is-active,
-    .is-success.hero-foo .navbar-link.is-active {
+    .is-success.hero-foo .navbar-link.is-active,
+    .is-success.hero-foo-reflection .navbar-link.is-active {
       background-color: #20bc56;
       color: #fff; }
-    .hero.is-success .tabs a, .is-success.hero-foo .tabs a {
+    .hero.is-success .tabs a, .is-success.hero-foo .tabs a, .is-success.hero-foo-reflection .tabs a {
       color: #fff;
       opacity: 0.9; }
-      .hero.is-success .tabs a:hover, .is-success.hero-foo .tabs a:hover {
+      .hero.is-success .tabs a:hover, .is-success.hero-foo .tabs a:hover, .is-success.hero-foo-reflection .tabs a:hover {
         opacity: 1; }
-    .hero.is-success .tabs li.is-active a, .is-success.hero-foo .tabs li.is-active a {
+    .hero.is-success .tabs li.is-active a, .is-success.hero-foo .tabs li.is-active a, .is-success.hero-foo-reflection .tabs li.is-active a {
       opacity: 1; }
-    .hero.is-success .tabs.is-boxed a, .is-success.hero-foo .tabs.is-boxed a, .hero.is-success .tabs.is-toggle a, .is-success.hero-foo .tabs.is-toggle a {
+    .hero.is-success .tabs.is-boxed a, .is-success.hero-foo .tabs.is-boxed a, .is-success.hero-foo-reflection .tabs.is-boxed a, .hero.is-success .tabs.is-toggle a, .is-success.hero-foo .tabs.is-toggle a, .is-success.hero-foo-reflection .tabs.is-toggle a {
       color: #fff; }
-      .hero.is-success .tabs.is-boxed a:hover, .is-success.hero-foo .tabs.is-boxed a:hover, .hero.is-success .tabs.is-toggle a:hover, .is-success.hero-foo .tabs.is-toggle a:hover {
+      .hero.is-success .tabs.is-boxed a:hover, .is-success.hero-foo .tabs.is-boxed a:hover, .is-success.hero-foo-reflection .tabs.is-boxed a:hover, .hero.is-success .tabs.is-toggle a:hover, .is-success.hero-foo .tabs.is-toggle a:hover, .is-success.hero-foo-reflection .tabs.is-toggle a:hover {
         background-color: rgba(45, 49, 66, 0.1); }
-    .hero.is-success .tabs.is-boxed li.is-active a, .is-success.hero-foo .tabs.is-boxed li.is-active a, .hero.is-success .tabs.is-boxed li.is-active a:hover, .is-success.hero-foo .tabs.is-boxed li.is-active a:hover, .hero.is-success .tabs.is-toggle li.is-active a, .is-success.hero-foo .tabs.is-toggle li.is-active a, .hero.is-success .tabs.is-toggle li.is-active a:hover, .is-success.hero-foo .tabs.is-toggle li.is-active a:hover {
+    .hero.is-success .tabs.is-boxed li.is-active a, .is-success.hero-foo .tabs.is-boxed li.is-active a, .is-success.hero-foo-reflection .tabs.is-boxed li.is-active a, .hero.is-success .tabs.is-boxed li.is-active a:hover, .is-success.hero-foo .tabs.is-boxed li.is-active a:hover, .is-success.hero-foo-reflection .tabs.is-boxed li.is-active a:hover, .hero.is-success .tabs.is-toggle li.is-active a, .is-success.hero-foo .tabs.is-toggle li.is-active a, .is-success.hero-foo-reflection .tabs.is-toggle li.is-active a, .hero.is-success .tabs.is-toggle li.is-active a:hover, .is-success.hero-foo .tabs.is-toggle li.is-active a:hover, .is-success.hero-foo-reflection .tabs.is-toggle li.is-active a:hover {
       background-color: #fff;
       border-color: #fff;
       color: #23d160; }
-    .hero.is-success.is-bold, .is-success.is-bold.hero-foo {
+    .hero.is-success.is-bold, .is-success.is-bold.hero-foo, .is-success.is-bold.hero-foo-reflection {
       background-image: linear-gradient(141deg, #12af2f 0%, #23d160 71%, #2ce28a 100%); }
       @media screen and (max-width: 768px) {
-        .hero.is-success.is-bold .navbar-menu, .is-success.is-bold.hero-foo .navbar-menu {
+        .hero.is-success.is-bold .navbar-menu, .is-success.is-bold.hero-foo .navbar-menu, .is-success.is-bold.hero-foo-reflection .navbar-menu {
           background-image: linear-gradient(141deg, #12af2f 0%, #23d160 71%, #2ce28a 100%); } }
-  .hero.is-warning, .is-warning.hero-foo {
+  .hero.is-warning, .is-warning.hero-foo, .is-warning.hero-foo-reflection {
     background-color: #ffdd57;
     color: rgba(0, 0, 0, 0.7); }
-    .hero.is-warning a:not(.button):not(.dropdown-item):not(.tag), .is-warning.hero-foo a:not(.button):not(.dropdown-item):not(.tag),
+    .hero.is-warning a:not(.button):not(.dropdown-item):not(.tag), .is-warning.hero-foo a:not(.button):not(.dropdown-item):not(.tag), .is-warning.hero-foo-reflection a:not(.button):not(.dropdown-item):not(.tag),
     .hero.is-warning strong,
-    .is-warning.hero-foo strong {
+    .is-warning.hero-foo strong,
+    .is-warning.hero-foo-reflection strong {
       color: inherit; }
-    .hero.is-warning .title, .is-warning.hero-foo .title {
+    .hero.is-warning .title, .is-warning.hero-foo .title, .is-warning.hero-foo-reflection .title {
       color: rgba(0, 0, 0, 0.7); }
-    .hero.is-warning .subtitle, .is-warning.hero-foo .subtitle {
+    .hero.is-warning .subtitle, .is-warning.hero-foo .subtitle, .is-warning.hero-foo-reflection .subtitle {
       color: rgba(0, 0, 0, 0.9); }
-      .hero.is-warning .subtitle a:not(.button), .is-warning.hero-foo .subtitle a:not(.button),
+      .hero.is-warning .subtitle a:not(.button), .is-warning.hero-foo .subtitle a:not(.button), .is-warning.hero-foo-reflection .subtitle a:not(.button),
       .hero.is-warning .subtitle strong,
-      .is-warning.hero-foo .subtitle strong {
+      .is-warning.hero-foo .subtitle strong,
+      .is-warning.hero-foo-reflection .subtitle strong {
         color: rgba(0, 0, 0, 0.7); }
     @media screen and (max-width: 1023px) {
-      .hero.is-warning .navbar-menu, .is-warning.hero-foo .navbar-menu {
+      .hero.is-warning .navbar-menu, .is-warning.hero-foo .navbar-menu, .is-warning.hero-foo-reflection .navbar-menu {
         background-color: #ffdd57; } }
-    .hero.is-warning .navbar-item, .is-warning.hero-foo .navbar-item,
+    .hero.is-warning .navbar-item, .is-warning.hero-foo .navbar-item, .is-warning.hero-foo-reflection .navbar-item,
     .hero.is-warning .navbar-link,
-    .is-warning.hero-foo .navbar-link {
+    .is-warning.hero-foo .navbar-link,
+    .is-warning.hero-foo-reflection .navbar-link {
       color: rgba(0, 0, 0, 0.7); }
-    .hero.is-warning a.navbar-item:hover, .is-warning.hero-foo a.navbar-item:hover, .hero.is-warning a.navbar-item.is-active, .is-warning.hero-foo a.navbar-item.is-active,
+    .hero.is-warning a.navbar-item:hover, .is-warning.hero-foo a.navbar-item:hover, .is-warning.hero-foo-reflection a.navbar-item:hover, .hero.is-warning a.navbar-item.is-active, .is-warning.hero-foo a.navbar-item.is-active, .is-warning.hero-foo-reflection a.navbar-item.is-active,
     .hero.is-warning .navbar-link:hover,
     .is-warning.hero-foo .navbar-link:hover,
+    .is-warning.hero-foo-reflection .navbar-link:hover,
     .hero.is-warning .navbar-link.is-active,
-    .is-warning.hero-foo .navbar-link.is-active {
+    .is-warning.hero-foo .navbar-link.is-active,
+    .is-warning.hero-foo-reflection .navbar-link.is-active {
       background-color: #ffd83d;
       color: rgba(0, 0, 0, 0.7); }
-    .hero.is-warning .tabs a, .is-warning.hero-foo .tabs a {
+    .hero.is-warning .tabs a, .is-warning.hero-foo .tabs a, .is-warning.hero-foo-reflection .tabs a {
       color: rgba(0, 0, 0, 0.7);
       opacity: 0.9; }
-      .hero.is-warning .tabs a:hover, .is-warning.hero-foo .tabs a:hover {
+      .hero.is-warning .tabs a:hover, .is-warning.hero-foo .tabs a:hover, .is-warning.hero-foo-reflection .tabs a:hover {
         opacity: 1; }
-    .hero.is-warning .tabs li.is-active a, .is-warning.hero-foo .tabs li.is-active a {
+    .hero.is-warning .tabs li.is-active a, .is-warning.hero-foo .tabs li.is-active a, .is-warning.hero-foo-reflection .tabs li.is-active a {
       opacity: 1; }
-    .hero.is-warning .tabs.is-boxed a, .is-warning.hero-foo .tabs.is-boxed a, .hero.is-warning .tabs.is-toggle a, .is-warning.hero-foo .tabs.is-toggle a {
+    .hero.is-warning .tabs.is-boxed a, .is-warning.hero-foo .tabs.is-boxed a, .is-warning.hero-foo-reflection .tabs.is-boxed a, .hero.is-warning .tabs.is-toggle a, .is-warning.hero-foo .tabs.is-toggle a, .is-warning.hero-foo-reflection .tabs.is-toggle a {
       color: rgba(0, 0, 0, 0.7); }
-      .hero.is-warning .tabs.is-boxed a:hover, .is-warning.hero-foo .tabs.is-boxed a:hover, .hero.is-warning .tabs.is-toggle a:hover, .is-warning.hero-foo .tabs.is-toggle a:hover {
+      .hero.is-warning .tabs.is-boxed a:hover, .is-warning.hero-foo .tabs.is-boxed a:hover, .is-warning.hero-foo-reflection .tabs.is-boxed a:hover, .hero.is-warning .tabs.is-toggle a:hover, .is-warning.hero-foo .tabs.is-toggle a:hover, .is-warning.hero-foo-reflection .tabs.is-toggle a:hover {
         background-color: rgba(45, 49, 66, 0.1); }
-    .hero.is-warning .tabs.is-boxed li.is-active a, .is-warning.hero-foo .tabs.is-boxed li.is-active a, .hero.is-warning .tabs.is-boxed li.is-active a:hover, .is-warning.hero-foo .tabs.is-boxed li.is-active a:hover, .hero.is-warning .tabs.is-toggle li.is-active a, .is-warning.hero-foo .tabs.is-toggle li.is-active a, .hero.is-warning .tabs.is-toggle li.is-active a:hover, .is-warning.hero-foo .tabs.is-toggle li.is-active a:hover {
+    .hero.is-warning .tabs.is-boxed li.is-active a, .is-warning.hero-foo .tabs.is-boxed li.is-active a, .is-warning.hero-foo-reflection .tabs.is-boxed li.is-active a, .hero.is-warning .tabs.is-boxed li.is-active a:hover, .is-warning.hero-foo .tabs.is-boxed li.is-active a:hover, .is-warning.hero-foo-reflection .tabs.is-boxed li.is-active a:hover, .hero.is-warning .tabs.is-toggle li.is-active a, .is-warning.hero-foo .tabs.is-toggle li.is-active a, .is-warning.hero-foo-reflection .tabs.is-toggle li.is-active a, .hero.is-warning .tabs.is-toggle li.is-active a:hover, .is-warning.hero-foo .tabs.is-toggle li.is-active a:hover, .is-warning.hero-foo-reflection .tabs.is-toggle li.is-active a:hover {
       background-color: rgba(0, 0, 0, 0.7);
       border-color: rgba(0, 0, 0, 0.7);
       color: #ffdd57; }
-    .hero.is-warning.is-bold, .is-warning.is-bold.hero-foo {
+    .hero.is-warning.is-bold, .is-warning.is-bold.hero-foo, .is-warning.is-bold.hero-foo-reflection {
       background-image: linear-gradient(141deg, #ffaf24 0%, #ffdd57 71%, #fffa70 100%); }
       @media screen and (max-width: 768px) {
-        .hero.is-warning.is-bold .navbar-menu, .is-warning.is-bold.hero-foo .navbar-menu {
+        .hero.is-warning.is-bold .navbar-menu, .is-warning.is-bold.hero-foo .navbar-menu, .is-warning.is-bold.hero-foo-reflection .navbar-menu {
           background-image: linear-gradient(141deg, #ffaf24 0%, #ffdd57 71%, #fffa70 100%); } }
-  .hero.is-danger, .is-danger.hero-foo {
+  .hero.is-danger, .is-danger.hero-foo, .is-danger.hero-foo-reflection {
     background-color: #ff470f;
     color: #fff; }
-    .hero.is-danger a:not(.button):not(.dropdown-item):not(.tag), .is-danger.hero-foo a:not(.button):not(.dropdown-item):not(.tag),
+    .hero.is-danger a:not(.button):not(.dropdown-item):not(.tag), .is-danger.hero-foo a:not(.button):not(.dropdown-item):not(.tag), .is-danger.hero-foo-reflection a:not(.button):not(.dropdown-item):not(.tag),
     .hero.is-danger strong,
-    .is-danger.hero-foo strong {
+    .is-danger.hero-foo strong,
+    .is-danger.hero-foo-reflection strong {
       color: inherit; }
-    .hero.is-danger .title, .is-danger.hero-foo .title {
+    .hero.is-danger .title, .is-danger.hero-foo .title, .is-danger.hero-foo-reflection .title {
       color: #fff; }
-    .hero.is-danger .subtitle, .is-danger.hero-foo .subtitle {
+    .hero.is-danger .subtitle, .is-danger.hero-foo .subtitle, .is-danger.hero-foo-reflection .subtitle {
       color: rgba(255, 255, 255, 0.9); }
-      .hero.is-danger .subtitle a:not(.button), .is-danger.hero-foo .subtitle a:not(.button),
+      .hero.is-danger .subtitle a:not(.button), .is-danger.hero-foo .subtitle a:not(.button), .is-danger.hero-foo-reflection .subtitle a:not(.button),
       .hero.is-danger .subtitle strong,
-      .is-danger.hero-foo .subtitle strong {
+      .is-danger.hero-foo .subtitle strong,
+      .is-danger.hero-foo-reflection .subtitle strong {
         color: #fff; }
     @media screen and (max-width: 1023px) {
-      .hero.is-danger .navbar-menu, .is-danger.hero-foo .navbar-menu {
+      .hero.is-danger .navbar-menu, .is-danger.hero-foo .navbar-menu, .is-danger.hero-foo-reflection .navbar-menu {
         background-color: #ff470f; } }
-    .hero.is-danger .navbar-item, .is-danger.hero-foo .navbar-item,
+    .hero.is-danger .navbar-item, .is-danger.hero-foo .navbar-item, .is-danger.hero-foo-reflection .navbar-item,
     .hero.is-danger .navbar-link,
-    .is-danger.hero-foo .navbar-link {
+    .is-danger.hero-foo .navbar-link,
+    .is-danger.hero-foo-reflection .navbar-link {
       color: rgba(255, 255, 255, 0.7); }
-    .hero.is-danger a.navbar-item:hover, .is-danger.hero-foo a.navbar-item:hover, .hero.is-danger a.navbar-item.is-active, .is-danger.hero-foo a.navbar-item.is-active,
+    .hero.is-danger a.navbar-item:hover, .is-danger.hero-foo a.navbar-item:hover, .is-danger.hero-foo-reflection a.navbar-item:hover, .hero.is-danger a.navbar-item.is-active, .is-danger.hero-foo a.navbar-item.is-active, .is-danger.hero-foo-reflection a.navbar-item.is-active,
     .hero.is-danger .navbar-link:hover,
     .is-danger.hero-foo .navbar-link:hover,
+    .is-danger.hero-foo-reflection .navbar-link:hover,
     .hero.is-danger .navbar-link.is-active,
-    .is-danger.hero-foo .navbar-link.is-active {
+    .is-danger.hero-foo .navbar-link.is-active,
+    .is-danger.hero-foo-reflection .navbar-link.is-active {
       background-color: #f53900;
       color: #fff; }
-    .hero.is-danger .tabs a, .is-danger.hero-foo .tabs a {
+    .hero.is-danger .tabs a, .is-danger.hero-foo .tabs a, .is-danger.hero-foo-reflection .tabs a {
       color: #fff;
       opacity: 0.9; }
-      .hero.is-danger .tabs a:hover, .is-danger.hero-foo .tabs a:hover {
+      .hero.is-danger .tabs a:hover, .is-danger.hero-foo .tabs a:hover, .is-danger.hero-foo-reflection .tabs a:hover {
         opacity: 1; }
-    .hero.is-danger .tabs li.is-active a, .is-danger.hero-foo .tabs li.is-active a {
+    .hero.is-danger .tabs li.is-active a, .is-danger.hero-foo .tabs li.is-active a, .is-danger.hero-foo-reflection .tabs li.is-active a {
       opacity: 1; }
-    .hero.is-danger .tabs.is-boxed a, .is-danger.hero-foo .tabs.is-boxed a, .hero.is-danger .tabs.is-toggle a, .is-danger.hero-foo .tabs.is-toggle a {
+    .hero.is-danger .tabs.is-boxed a, .is-danger.hero-foo .tabs.is-boxed a, .is-danger.hero-foo-reflection .tabs.is-boxed a, .hero.is-danger .tabs.is-toggle a, .is-danger.hero-foo .tabs.is-toggle a, .is-danger.hero-foo-reflection .tabs.is-toggle a {
       color: #fff; }
-      .hero.is-danger .tabs.is-boxed a:hover, .is-danger.hero-foo .tabs.is-boxed a:hover, .hero.is-danger .tabs.is-toggle a:hover, .is-danger.hero-foo .tabs.is-toggle a:hover {
+      .hero.is-danger .tabs.is-boxed a:hover, .is-danger.hero-foo .tabs.is-boxed a:hover, .is-danger.hero-foo-reflection .tabs.is-boxed a:hover, .hero.is-danger .tabs.is-toggle a:hover, .is-danger.hero-foo .tabs.is-toggle a:hover, .is-danger.hero-foo-reflection .tabs.is-toggle a:hover {
         background-color: rgba(45, 49, 66, 0.1); }
-    .hero.is-danger .tabs.is-boxed li.is-active a, .is-danger.hero-foo .tabs.is-boxed li.is-active a, .hero.is-danger .tabs.is-boxed li.is-active a:hover, .is-danger.hero-foo .tabs.is-boxed li.is-active a:hover, .hero.is-danger .tabs.is-toggle li.is-active a, .is-danger.hero-foo .tabs.is-toggle li.is-active a, .hero.is-danger .tabs.is-toggle li.is-active a:hover, .is-danger.hero-foo .tabs.is-toggle li.is-active a:hover {
+    .hero.is-danger .tabs.is-boxed li.is-active a, .is-danger.hero-foo .tabs.is-boxed li.is-active a, .is-danger.hero-foo-reflection .tabs.is-boxed li.is-active a, .hero.is-danger .tabs.is-boxed li.is-active a:hover, .is-danger.hero-foo .tabs.is-boxed li.is-active a:hover, .is-danger.hero-foo-reflection .tabs.is-boxed li.is-active a:hover, .hero.is-danger .tabs.is-toggle li.is-active a, .is-danger.hero-foo .tabs.is-toggle li.is-active a, .is-danger.hero-foo-reflection .tabs.is-toggle li.is-active a, .hero.is-danger .tabs.is-toggle li.is-active a:hover, .is-danger.hero-foo .tabs.is-toggle li.is-active a:hover, .is-danger.hero-foo-reflection .tabs.is-toggle li.is-active a:hover {
       background-color: #fff;
       border-color: #fff;
       color: #ff470f; }
-    .hero.is-danger.is-bold, .is-danger.is-bold.hero-foo {
+    .hero.is-danger.is-bold, .is-danger.is-bold.hero-foo, .is-danger.is-bold.hero-foo-reflection {
       background-image: linear-gradient(141deg, #db0f00 0%, #ff470f 71%, #ff7e29 100%); }
       @media screen and (max-width: 768px) {
-        .hero.is-danger.is-bold .navbar-menu, .is-danger.is-bold.hero-foo .navbar-menu {
+        .hero.is-danger.is-bold .navbar-menu, .is-danger.is-bold.hero-foo .navbar-menu, .is-danger.is-bold.hero-foo-reflection .navbar-menu {
           background-image: linear-gradient(141deg, #db0f00 0%, #ff470f 71%, #ff7e29 100%); } }
-  .hero.is-secondary, .is-secondary.hero-foo {
+  .hero.is-secondary, .is-secondary.hero-foo, .is-secondary.hero-foo-reflection {
     background-color: #f7faff;
     color: #3c424f; }
-    .hero.is-secondary a:not(.button):not(.dropdown-item):not(.tag), .is-secondary.hero-foo a:not(.button):not(.dropdown-item):not(.tag),
+    .hero.is-secondary a:not(.button):not(.dropdown-item):not(.tag), .is-secondary.hero-foo a:not(.button):not(.dropdown-item):not(.tag), .is-secondary.hero-foo-reflection a:not(.button):not(.dropdown-item):not(.tag),
     .hero.is-secondary strong,
-    .is-secondary.hero-foo strong {
+    .is-secondary.hero-foo strong,
+    .is-secondary.hero-foo-reflection strong {
       color: inherit; }
-    .hero.is-secondary .title, .is-secondary.hero-foo .title {
+    .hero.is-secondary .title, .is-secondary.hero-foo .title, .is-secondary.hero-foo-reflection .title {
       color: #3c424f; }
-    .hero.is-secondary .subtitle, .is-secondary.hero-foo .subtitle {
+    .hero.is-secondary .subtitle, .is-secondary.hero-foo .subtitle, .is-secondary.hero-foo-reflection .subtitle {
       color: rgba(60, 66, 79, 0.9); }
-      .hero.is-secondary .subtitle a:not(.button), .is-secondary.hero-foo .subtitle a:not(.button),
+      .hero.is-secondary .subtitle a:not(.button), .is-secondary.hero-foo .subtitle a:not(.button), .is-secondary.hero-foo-reflection .subtitle a:not(.button),
       .hero.is-secondary .subtitle strong,
-      .is-secondary.hero-foo .subtitle strong {
+      .is-secondary.hero-foo .subtitle strong,
+      .is-secondary.hero-foo-reflection .subtitle strong {
         color: #3c424f; }
     @media screen and (max-width: 1023px) {
-      .hero.is-secondary .navbar-menu, .is-secondary.hero-foo .navbar-menu {
+      .hero.is-secondary .navbar-menu, .is-secondary.hero-foo .navbar-menu, .is-secondary.hero-foo-reflection .navbar-menu {
         background-color: #f7faff; } }
-    .hero.is-secondary .navbar-item, .is-secondary.hero-foo .navbar-item,
+    .hero.is-secondary .navbar-item, .is-secondary.hero-foo .navbar-item, .is-secondary.hero-foo-reflection .navbar-item,
     .hero.is-secondary .navbar-link,
-    .is-secondary.hero-foo .navbar-link {
+    .is-secondary.hero-foo .navbar-link,
+    .is-secondary.hero-foo-reflection .navbar-link {
       color: rgba(60, 66, 79, 0.7); }
-    .hero.is-secondary a.navbar-item:hover, .is-secondary.hero-foo a.navbar-item:hover, .hero.is-secondary a.navbar-item.is-active, .is-secondary.hero-foo a.navbar-item.is-active,
+    .hero.is-secondary a.navbar-item:hover, .is-secondary.hero-foo a.navbar-item:hover, .is-secondary.hero-foo-reflection a.navbar-item:hover, .hero.is-secondary a.navbar-item.is-active, .is-secondary.hero-foo a.navbar-item.is-active, .is-secondary.hero-foo-reflection a.navbar-item.is-active,
     .hero.is-secondary .navbar-link:hover,
     .is-secondary.hero-foo .navbar-link:hover,
+    .is-secondary.hero-foo-reflection .navbar-link:hover,
     .hero.is-secondary .navbar-link.is-active,
-    .is-secondary.hero-foo .navbar-link.is-active {
+    .is-secondary.hero-foo .navbar-link.is-active,
+    .is-secondary.hero-foo-reflection .navbar-link.is-active {
       background-color: #deeaff;
       color: #3c424f; }
-    .hero.is-secondary .tabs a, .is-secondary.hero-foo .tabs a {
+    .hero.is-secondary .tabs a, .is-secondary.hero-foo .tabs a, .is-secondary.hero-foo-reflection .tabs a {
       color: #3c424f;
       opacity: 0.9; }
-      .hero.is-secondary .tabs a:hover, .is-secondary.hero-foo .tabs a:hover {
+      .hero.is-secondary .tabs a:hover, .is-secondary.hero-foo .tabs a:hover, .is-secondary.hero-foo-reflection .tabs a:hover {
         opacity: 1; }
-    .hero.is-secondary .tabs li.is-active a, .is-secondary.hero-foo .tabs li.is-active a {
+    .hero.is-secondary .tabs li.is-active a, .is-secondary.hero-foo .tabs li.is-active a, .is-secondary.hero-foo-reflection .tabs li.is-active a {
       opacity: 1; }
-    .hero.is-secondary .tabs.is-boxed a, .is-secondary.hero-foo .tabs.is-boxed a, .hero.is-secondary .tabs.is-toggle a, .is-secondary.hero-foo .tabs.is-toggle a {
+    .hero.is-secondary .tabs.is-boxed a, .is-secondary.hero-foo .tabs.is-boxed a, .is-secondary.hero-foo-reflection .tabs.is-boxed a, .hero.is-secondary .tabs.is-toggle a, .is-secondary.hero-foo .tabs.is-toggle a, .is-secondary.hero-foo-reflection .tabs.is-toggle a {
       color: #3c424f; }
-      .hero.is-secondary .tabs.is-boxed a:hover, .is-secondary.hero-foo .tabs.is-boxed a:hover, .hero.is-secondary .tabs.is-toggle a:hover, .is-secondary.hero-foo .tabs.is-toggle a:hover {
+      .hero.is-secondary .tabs.is-boxed a:hover, .is-secondary.hero-foo .tabs.is-boxed a:hover, .is-secondary.hero-foo-reflection .tabs.is-boxed a:hover, .hero.is-secondary .tabs.is-toggle a:hover, .is-secondary.hero-foo .tabs.is-toggle a:hover, .is-secondary.hero-foo-reflection .tabs.is-toggle a:hover {
         background-color: rgba(45, 49, 66, 0.1); }
-    .hero.is-secondary .tabs.is-boxed li.is-active a, .is-secondary.hero-foo .tabs.is-boxed li.is-active a, .hero.is-secondary .tabs.is-boxed li.is-active a:hover, .is-secondary.hero-foo .tabs.is-boxed li.is-active a:hover, .hero.is-secondary .tabs.is-toggle li.is-active a, .is-secondary.hero-foo .tabs.is-toggle li.is-active a, .hero.is-secondary .tabs.is-toggle li.is-active a:hover, .is-secondary.hero-foo .tabs.is-toggle li.is-active a:hover {
+    .hero.is-secondary .tabs.is-boxed li.is-active a, .is-secondary.hero-foo .tabs.is-boxed li.is-active a, .is-secondary.hero-foo-reflection .tabs.is-boxed li.is-active a, .hero.is-secondary .tabs.is-boxed li.is-active a:hover, .is-secondary.hero-foo .tabs.is-boxed li.is-active a:hover, .is-secondary.hero-foo-reflection .tabs.is-boxed li.is-active a:hover, .hero.is-secondary .tabs.is-toggle li.is-active a, .is-secondary.hero-foo .tabs.is-toggle li.is-active a, .is-secondary.hero-foo-reflection .tabs.is-toggle li.is-active a, .hero.is-secondary .tabs.is-toggle li.is-active a:hover, .is-secondary.hero-foo .tabs.is-toggle li.is-active a:hover, .is-secondary.hero-foo-reflection .tabs.is-toggle li.is-active a:hover {
       background-color: #3c424f;
       border-color: #3c424f;
       color: #f7faff; }
-    .hero.is-secondary.is-bold, .is-secondary.is-bold.hero-foo {
+    .hero.is-secondary.is-bold, .is-secondary.is-bold.hero-foo, .is-secondary.is-bold.hero-foo-reflection {
       background-image: linear-gradient(141deg, #c4e4ff 0%, #f7faff 71%, white 100%); }
       @media screen and (max-width: 768px) {
-        .hero.is-secondary.is-bold .navbar-menu, .is-secondary.is-bold.hero-foo .navbar-menu {
+        .hero.is-secondary.is-bold .navbar-menu, .is-secondary.is-bold.hero-foo .navbar-menu, .is-secondary.is-bold.hero-foo-reflection .navbar-menu {
           background-image: linear-gradient(141deg, #c4e4ff 0%, #f7faff 71%, white 100%); } }
-  .hero.is-navtext, .is-navtext.hero-foo {
+  .hero.is-navtext, .is-navtext.hero-foo, .is-navtext.hero-foo-reflection {
     background-color: #3c424f;
     color: #000; }
-    .hero.is-navtext a:not(.button):not(.dropdown-item):not(.tag), .is-navtext.hero-foo a:not(.button):not(.dropdown-item):not(.tag),
+    .hero.is-navtext a:not(.button):not(.dropdown-item):not(.tag), .is-navtext.hero-foo a:not(.button):not(.dropdown-item):not(.tag), .is-navtext.hero-foo-reflection a:not(.button):not(.dropdown-item):not(.tag),
     .hero.is-navtext strong,
-    .is-navtext.hero-foo strong {
+    .is-navtext.hero-foo strong,
+    .is-navtext.hero-foo-reflection strong {
       color: inherit; }
-    .hero.is-navtext .title, .is-navtext.hero-foo .title {
+    .hero.is-navtext .title, .is-navtext.hero-foo .title, .is-navtext.hero-foo-reflection .title {
       color: #000; }
-    .hero.is-navtext .subtitle, .is-navtext.hero-foo .subtitle {
+    .hero.is-navtext .subtitle, .is-navtext.hero-foo .subtitle, .is-navtext.hero-foo-reflection .subtitle {
       color: rgba(0, 0, 0, 0.9); }
-      .hero.is-navtext .subtitle a:not(.button), .is-navtext.hero-foo .subtitle a:not(.button),
+      .hero.is-navtext .subtitle a:not(.button), .is-navtext.hero-foo .subtitle a:not(.button), .is-navtext.hero-foo-reflection .subtitle a:not(.button),
       .hero.is-navtext .subtitle strong,
-      .is-navtext.hero-foo .subtitle strong {
+      .is-navtext.hero-foo .subtitle strong,
+      .is-navtext.hero-foo-reflection .subtitle strong {
         color: #000; }
     @media screen and (max-width: 1023px) {
-      .hero.is-navtext .navbar-menu, .is-navtext.hero-foo .navbar-menu {
+      .hero.is-navtext .navbar-menu, .is-navtext.hero-foo .navbar-menu, .is-navtext.hero-foo-reflection .navbar-menu {
         background-color: #3c424f; } }
-    .hero.is-navtext .navbar-item, .is-navtext.hero-foo .navbar-item,
+    .hero.is-navtext .navbar-item, .is-navtext.hero-foo .navbar-item, .is-navtext.hero-foo-reflection .navbar-item,
     .hero.is-navtext .navbar-link,
-    .is-navtext.hero-foo .navbar-link {
+    .is-navtext.hero-foo .navbar-link,
+    .is-navtext.hero-foo-reflection .navbar-link {
       color: rgba(0, 0, 0, 0.7); }
-    .hero.is-navtext a.navbar-item:hover, .is-navtext.hero-foo a.navbar-item:hover, .hero.is-navtext a.navbar-item.is-active, .is-navtext.hero-foo a.navbar-item.is-active,
+    .hero.is-navtext a.navbar-item:hover, .is-navtext.hero-foo a.navbar-item:hover, .is-navtext.hero-foo-reflection a.navbar-item:hover, .hero.is-navtext a.navbar-item.is-active, .is-navtext.hero-foo a.navbar-item.is-active, .is-navtext.hero-foo-reflection a.navbar-item.is-active,
     .hero.is-navtext .navbar-link:hover,
     .is-navtext.hero-foo .navbar-link:hover,
+    .is-navtext.hero-foo-reflection .navbar-link:hover,
     .hero.is-navtext .navbar-link.is-active,
-    .is-navtext.hero-foo .navbar-link.is-active {
+    .is-navtext.hero-foo .navbar-link.is-active,
+    .is-navtext.hero-foo-reflection .navbar-link.is-active {
       background-color: #313641;
       color: #000; }
-    .hero.is-navtext .tabs a, .is-navtext.hero-foo .tabs a {
+    .hero.is-navtext .tabs a, .is-navtext.hero-foo .tabs a, .is-navtext.hero-foo-reflection .tabs a {
       color: #000;
       opacity: 0.9; }
-      .hero.is-navtext .tabs a:hover, .is-navtext.hero-foo .tabs a:hover {
+      .hero.is-navtext .tabs a:hover, .is-navtext.hero-foo .tabs a:hover, .is-navtext.hero-foo-reflection .tabs a:hover {
         opacity: 1; }
-    .hero.is-navtext .tabs li.is-active a, .is-navtext.hero-foo .tabs li.is-active a {
+    .hero.is-navtext .tabs li.is-active a, .is-navtext.hero-foo .tabs li.is-active a, .is-navtext.hero-foo-reflection .tabs li.is-active a {
       opacity: 1; }
-    .hero.is-navtext .tabs.is-boxed a, .is-navtext.hero-foo .tabs.is-boxed a, .hero.is-navtext .tabs.is-toggle a, .is-navtext.hero-foo .tabs.is-toggle a {
+    .hero.is-navtext .tabs.is-boxed a, .is-navtext.hero-foo .tabs.is-boxed a, .is-navtext.hero-foo-reflection .tabs.is-boxed a, .hero.is-navtext .tabs.is-toggle a, .is-navtext.hero-foo .tabs.is-toggle a, .is-navtext.hero-foo-reflection .tabs.is-toggle a {
       color: #000; }
-      .hero.is-navtext .tabs.is-boxed a:hover, .is-navtext.hero-foo .tabs.is-boxed a:hover, .hero.is-navtext .tabs.is-toggle a:hover, .is-navtext.hero-foo .tabs.is-toggle a:hover {
+      .hero.is-navtext .tabs.is-boxed a:hover, .is-navtext.hero-foo .tabs.is-boxed a:hover, .is-navtext.hero-foo-reflection .tabs.is-boxed a:hover, .hero.is-navtext .tabs.is-toggle a:hover, .is-navtext.hero-foo .tabs.is-toggle a:hover, .is-navtext.hero-foo-reflection .tabs.is-toggle a:hover {
         background-color: rgba(45, 49, 66, 0.1); }
-    .hero.is-navtext .tabs.is-boxed li.is-active a, .is-navtext.hero-foo .tabs.is-boxed li.is-active a, .hero.is-navtext .tabs.is-boxed li.is-active a:hover, .is-navtext.hero-foo .tabs.is-boxed li.is-active a:hover, .hero.is-navtext .tabs.is-toggle li.is-active a, .is-navtext.hero-foo .tabs.is-toggle li.is-active a, .hero.is-navtext .tabs.is-toggle li.is-active a:hover, .is-navtext.hero-foo .tabs.is-toggle li.is-active a:hover {
+    .hero.is-navtext .tabs.is-boxed li.is-active a, .is-navtext.hero-foo .tabs.is-boxed li.is-active a, .is-navtext.hero-foo-reflection .tabs.is-boxed li.is-active a, .hero.is-navtext .tabs.is-boxed li.is-active a:hover, .is-navtext.hero-foo .tabs.is-boxed li.is-active a:hover, .is-navtext.hero-foo-reflection .tabs.is-boxed li.is-active a:hover, .hero.is-navtext .tabs.is-toggle li.is-active a, .is-navtext.hero-foo .tabs.is-toggle li.is-active a, .is-navtext.hero-foo-reflection .tabs.is-toggle li.is-active a, .hero.is-navtext .tabs.is-toggle li.is-active a:hover, .is-navtext.hero-foo .tabs.is-toggle li.is-active a:hover, .is-navtext.hero-foo-reflection .tabs.is-toggle li.is-active a:hover {
       background-color: #000;
       border-color: #000;
       color: #3c424f; }
-    .hero.is-navtext.is-bold, .is-navtext.is-bold.hero-foo {
+    .hero.is-navtext.is-bold, .is-navtext.is-bold.hero-foo, .is-navtext.is-bold.hero-foo-reflection {
       background-image: linear-gradient(141deg, #222c36 0%, #3c424f 71%, #434762 100%); }
       @media screen and (max-width: 768px) {
-        .hero.is-navtext.is-bold .navbar-menu, .is-navtext.is-bold.hero-foo .navbar-menu {
+        .hero.is-navtext.is-bold .navbar-menu, .is-navtext.is-bold.hero-foo .navbar-menu, .is-navtext.is-bold.hero-foo-reflection .navbar-menu {
           background-image: linear-gradient(141deg, #222c36 0%, #3c424f 71%, #434762 100%); } }
-  .hero.is-tertiary, .is-tertiary.hero-foo {
+  .hero.is-tertiary, .is-tertiary.hero-foo, .is-tertiary.hero-foo-reflection {
     background-color: #808080;
     color: #fff; }
-    .hero.is-tertiary a:not(.button):not(.dropdown-item):not(.tag), .is-tertiary.hero-foo a:not(.button):not(.dropdown-item):not(.tag),
+    .hero.is-tertiary a:not(.button):not(.dropdown-item):not(.tag), .is-tertiary.hero-foo a:not(.button):not(.dropdown-item):not(.tag), .is-tertiary.hero-foo-reflection a:not(.button):not(.dropdown-item):not(.tag),
     .hero.is-tertiary strong,
-    .is-tertiary.hero-foo strong {
+    .is-tertiary.hero-foo strong,
+    .is-tertiary.hero-foo-reflection strong {
       color: inherit; }
-    .hero.is-tertiary .title, .is-tertiary.hero-foo .title {
+    .hero.is-tertiary .title, .is-tertiary.hero-foo .title, .is-tertiary.hero-foo-reflection .title {
       color: #fff; }
-    .hero.is-tertiary .subtitle, .is-tertiary.hero-foo .subtitle {
+    .hero.is-tertiary .subtitle, .is-tertiary.hero-foo .subtitle, .is-tertiary.hero-foo-reflection .subtitle {
       color: rgba(255, 255, 255, 0.9); }
-      .hero.is-tertiary .subtitle a:not(.button), .is-tertiary.hero-foo .subtitle a:not(.button),
+      .hero.is-tertiary .subtitle a:not(.button), .is-tertiary.hero-foo .subtitle a:not(.button), .is-tertiary.hero-foo-reflection .subtitle a:not(.button),
       .hero.is-tertiary .subtitle strong,
-      .is-tertiary.hero-foo .subtitle strong {
+      .is-tertiary.hero-foo .subtitle strong,
+      .is-tertiary.hero-foo-reflection .subtitle strong {
         color: #fff; }
     @media screen and (max-width: 1023px) {
-      .hero.is-tertiary .navbar-menu, .is-tertiary.hero-foo .navbar-menu {
+      .hero.is-tertiary .navbar-menu, .is-tertiary.hero-foo .navbar-menu, .is-tertiary.hero-foo-reflection .navbar-menu {
         background-color: #808080; } }
-    .hero.is-tertiary .navbar-item, .is-tertiary.hero-foo .navbar-item,
+    .hero.is-tertiary .navbar-item, .is-tertiary.hero-foo .navbar-item, .is-tertiary.hero-foo-reflection .navbar-item,
     .hero.is-tertiary .navbar-link,
-    .is-tertiary.hero-foo .navbar-link {
+    .is-tertiary.hero-foo .navbar-link,
+    .is-tertiary.hero-foo-reflection .navbar-link {
       color: rgba(255, 255, 255, 0.7); }
-    .hero.is-tertiary a.navbar-item:hover, .is-tertiary.hero-foo a.navbar-item:hover, .hero.is-tertiary a.navbar-item.is-active, .is-tertiary.hero-foo a.navbar-item.is-active,
+    .hero.is-tertiary a.navbar-item:hover, .is-tertiary.hero-foo a.navbar-item:hover, .is-tertiary.hero-foo-reflection a.navbar-item:hover, .hero.is-tertiary a.navbar-item.is-active, .is-tertiary.hero-foo a.navbar-item.is-active, .is-tertiary.hero-foo-reflection a.navbar-item.is-active,
     .hero.is-tertiary .navbar-link:hover,
     .is-tertiary.hero-foo .navbar-link:hover,
+    .is-tertiary.hero-foo-reflection .navbar-link:hover,
     .hero.is-tertiary .navbar-link.is-active,
-    .is-tertiary.hero-foo .navbar-link.is-active {
+    .is-tertiary.hero-foo .navbar-link.is-active,
+    .is-tertiary.hero-foo-reflection .navbar-link.is-active {
       background-color: #737373;
       color: #fff; }
-    .hero.is-tertiary .tabs a, .is-tertiary.hero-foo .tabs a {
+    .hero.is-tertiary .tabs a, .is-tertiary.hero-foo .tabs a, .is-tertiary.hero-foo-reflection .tabs a {
       color: #fff;
       opacity: 0.9; }
-      .hero.is-tertiary .tabs a:hover, .is-tertiary.hero-foo .tabs a:hover {
+      .hero.is-tertiary .tabs a:hover, .is-tertiary.hero-foo .tabs a:hover, .is-tertiary.hero-foo-reflection .tabs a:hover {
         opacity: 1; }
-    .hero.is-tertiary .tabs li.is-active a, .is-tertiary.hero-foo .tabs li.is-active a {
+    .hero.is-tertiary .tabs li.is-active a, .is-tertiary.hero-foo .tabs li.is-active a, .is-tertiary.hero-foo-reflection .tabs li.is-active a {
       opacity: 1; }
-    .hero.is-tertiary .tabs.is-boxed a, .is-tertiary.hero-foo .tabs.is-boxed a, .hero.is-tertiary .tabs.is-toggle a, .is-tertiary.hero-foo .tabs.is-toggle a {
+    .hero.is-tertiary .tabs.is-boxed a, .is-tertiary.hero-foo .tabs.is-boxed a, .is-tertiary.hero-foo-reflection .tabs.is-boxed a, .hero.is-tertiary .tabs.is-toggle a, .is-tertiary.hero-foo .tabs.is-toggle a, .is-tertiary.hero-foo-reflection .tabs.is-toggle a {
       color: #fff; }
-      .hero.is-tertiary .tabs.is-boxed a:hover, .is-tertiary.hero-foo .tabs.is-boxed a:hover, .hero.is-tertiary .tabs.is-toggle a:hover, .is-tertiary.hero-foo .tabs.is-toggle a:hover {
+      .hero.is-tertiary .tabs.is-boxed a:hover, .is-tertiary.hero-foo .tabs.is-boxed a:hover, .is-tertiary.hero-foo-reflection .tabs.is-boxed a:hover, .hero.is-tertiary .tabs.is-toggle a:hover, .is-tertiary.hero-foo .tabs.is-toggle a:hover, .is-tertiary.hero-foo-reflection .tabs.is-toggle a:hover {
         background-color: rgba(45, 49, 66, 0.1); }
-    .hero.is-tertiary .tabs.is-boxed li.is-active a, .is-tertiary.hero-foo .tabs.is-boxed li.is-active a, .hero.is-tertiary .tabs.is-boxed li.is-active a:hover, .is-tertiary.hero-foo .tabs.is-boxed li.is-active a:hover, .hero.is-tertiary .tabs.is-toggle li.is-active a, .is-tertiary.hero-foo .tabs.is-toggle li.is-active a, .hero.is-tertiary .tabs.is-toggle li.is-active a:hover, .is-tertiary.hero-foo .tabs.is-toggle li.is-active a:hover {
+    .hero.is-tertiary .tabs.is-boxed li.is-active a, .is-tertiary.hero-foo .tabs.is-boxed li.is-active a, .is-tertiary.hero-foo-reflection .tabs.is-boxed li.is-active a, .hero.is-tertiary .tabs.is-boxed li.is-active a:hover, .is-tertiary.hero-foo .tabs.is-boxed li.is-active a:hover, .is-tertiary.hero-foo-reflection .tabs.is-boxed li.is-active a:hover, .hero.is-tertiary .tabs.is-toggle li.is-active a, .is-tertiary.hero-foo .tabs.is-toggle li.is-active a, .is-tertiary.hero-foo-reflection .tabs.is-toggle li.is-active a, .hero.is-tertiary .tabs.is-toggle li.is-active a:hover, .is-tertiary.hero-foo .tabs.is-toggle li.is-active a:hover, .is-tertiary.hero-foo-reflection .tabs.is-toggle li.is-active a:hover {
       background-color: #fff;
       border-color: #fff;
       color: #808080; }
-    .hero.is-tertiary.is-bold, .is-tertiary.is-bold.hero-foo {
+    .hero.is-tertiary.is-bold, .is-tertiary.is-bold.hero-foo, .is-tertiary.is-bold.hero-foo-reflection {
       background-image: linear-gradient(141deg, #715c60 0%, #808080 71%, #928987 100%); }
       @media screen and (max-width: 768px) {
-        .hero.is-tertiary.is-bold .navbar-menu, .is-tertiary.is-bold.hero-foo .navbar-menu {
+        .hero.is-tertiary.is-bold .navbar-menu, .is-tertiary.is-bold.hero-foo .navbar-menu, .is-tertiary.is-bold.hero-foo-reflection .navbar-menu {
           background-image: linear-gradient(141deg, #715c60 0%, #808080 71%, #928987 100%); } }
-  .hero.is-small .hero-body, .is-small.hero-foo .hero-body {
+  .hero.is-small .hero-body, .is-small.hero-foo .hero-body, .is-small.hero-foo-reflection .hero-body {
     padding-bottom: 1.5rem;
     padding-top: 1.5rem; }
   @media screen and (min-width: 769px), print {
-    .hero.is-medium .hero-body, .is-medium.hero-foo .hero-body {
+    .hero.is-medium .hero-body, .is-medium.hero-foo .hero-body, .is-medium.hero-foo-reflection .hero-body {
       padding-bottom: 9rem;
       padding-top: 9rem; } }
   @media screen and (min-width: 769px), print {
-    .hero.is-large .hero-body, .is-large.hero-foo .hero-body {
+    .hero.is-large .hero-body, .is-large.hero-foo .hero-body, .is-large.hero-foo-reflection .hero-body {
       padding-bottom: 18rem;
       padding-top: 18rem; } }
-  .hero.is-halfheight .hero-body, .is-halfheight.hero-foo .hero-body, .hero.is-fullheight .hero-body, .is-fullheight.hero-foo .hero-body {
+  .hero.is-halfheight .hero-body, .is-halfheight.hero-foo .hero-body, .is-halfheight.hero-foo-reflection .hero-body, .hero.is-fullheight .hero-body, .is-fullheight.hero-foo .hero-body, .is-fullheight.hero-foo-reflection .hero-body {
     align-items: center;
     display: flex; }
-    .hero.is-halfheight .hero-body > .container, .is-halfheight.hero-foo .hero-body > .container, .hero.is-fullheight .hero-body > .container, .is-fullheight.hero-foo .hero-body > .container {
+    .hero.is-halfheight .hero-body > .container, .is-halfheight.hero-foo .hero-body > .container, .is-halfheight.hero-foo-reflection .hero-body > .container, .hero.is-fullheight .hero-body > .container, .is-fullheight.hero-foo .hero-body > .container, .is-fullheight.hero-foo-reflection .hero-body > .container {
       flex-grow: 1;
       flex-shrink: 1; }
-  .hero.is-halfheight, .is-halfheight.hero-foo {
+  .hero.is-halfheight, .is-halfheight.hero-foo, .is-halfheight.hero-foo-reflection {
     min-height: 50vh; }
-  .hero.is-fullheight, .is-fullheight.hero-foo {
+  .hero.is-fullheight, .is-fullheight.hero-foo, .is-fullheight.hero-foo-reflection {
     min-height: 100vh; }
 
 .hero-video {

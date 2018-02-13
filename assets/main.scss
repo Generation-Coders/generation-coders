@@ -34,6 +34,21 @@ $body-line-height: 1.8;
 		font-weight: 500;
 	}
 }
+.hero-foo-reflection {
+	@extend .hero;
+	background: url('img/hero.jpg');
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center;
+	/*.subtitle a {
+		font-weight: 500;
+	}*/
+}
+.reflection-below-hero {
+	.hero-body {
+		padding: 1.3rem 1.5rem 0.5rem 1.5rem !important;
+	}
+}
 .text-light {
 	font-weight: 300;
 }
@@ -58,7 +73,7 @@ $body-line-height: 1.8;
 		a {
 			display:block;
  			text-decoration:none;
-  			line-height:52px;
+  			line-height:63px;
   			padding:0 15px;
 		}
 		li {
@@ -71,9 +86,9 @@ $body-line-height: 1.8;
     .logo {
 		position: relative;
 		z-index: 6;
-		height: 3em;
+		height: 4em;
 		float: left;
-		padding-top: 7px !important;
+		padding-top: 0px !important;
 		padding: 0 6%;
 	}
 }
@@ -90,9 +105,39 @@ $body-line-height: 1.8;
 	margin-top: 1.5em;
 
 }
-.card-content {
+.card-overlay {
 	padding: 0.6rem !important;
 }
+.reflection-subtitle {
+	font-size: 1rem;
+    font-weight: 600 !important;
+    
+}
+.reflection-title {
+	font-size: 1.7rem;
+    font-weight: 600 !important;
+    line-height: 0.6;
+}
+.reflection-content {
+	padding: 1em 1.5rem;
+}
+/*.reflection-card {
+	padding: 1.5rem !important;
+}
+.reflection-title {
+	font-size: 2rem;
+    font-weight: 4100 !important;
+    line-height: 2;
+}
+.reflection-text {
+	    line-height: 1.4;
+   		margin: 0 5.5rem;
+	p {
+		line-height: 1.9;
+    	margin: 15px 0;
+    	font-size: 0.9rem;
+	}
+}*/
 .card-image {
 	padding-bottom: 66.6666%;
 	bottom: 0;
