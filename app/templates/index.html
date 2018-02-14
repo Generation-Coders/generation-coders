@@ -1,40 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Generation Coders</title>
-    <link rel="stylesheet" href="assets/main.css">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico"/>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
-  </head>
-  <body>
+{% block content %}
+{% include 'base.html' %}
+{% include 'navbar.html' %}
 <section class="hero-foo is-primary is-medium">
-  <!-- Hero head: will stick at the top -->
-  <div class="hero-head">
-    <nav class="navbar">
-      <div class="container">
-        <div id="nav">
-          <div class="container">
-            <a href="index.html"><img class="logo" src="assets/img/Logo.jpg"></a>
-            <ul class="has-text-navtext">
-              <li class="is-active"><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="showcase.html">Showcase</a></li>
-              <li><a href="upcoming.html">Upcoming</a></li>
-              <li><a href="resources.html">Resources</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
+<div class="hero-body">
+  <div class="container has-text-centered">
+    <h1 class="is-size-1 title">Generation Coders</h1>
+    <h2 class="is-size-4 subtitle text-light">Making technology accessible to <a href="/about">all</a> generations</h2>
   </div>
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <h1 class="is-size-1 title">Generation Coders</h1>
-      <h2 class="is-size-4 subtitle text-light">Making technology accessible to <a href="about.html">all</a> generations</h2>
-    </div>
-  </div>
+</div>
 </section>
 <section class="section notification is-secondary">
   <div class="container">
@@ -54,7 +27,7 @@
       </div>
       <div class="column">
         <figure class="image">
-            <img class="has-shadow" src="assets/img/bc.png">
+            <img class="has-shadow" src="{{ url_for('static', filename = 'img/bc.png')}}">
           </figure>
       </div>
       </div>
@@ -65,21 +38,21 @@
     <div class="columns has-text-centered">
       <div class="column">
         <figure class="is-horizontal-center image is-96x96">
-            <img class="is-horizontal-center" src="assets/img/004-coding.svg">
+            <img class="is-horizontal-center" src="{{ url_for('static', filename = 'img/004-coding.svg')}}">
         </figure>
         <p class="subtitle has-text-black big-icon-below">Education</p>
         <p class="has-text-tertiary">"Education is the most powerful weapon which you can use to change the world" -Nelson Mandela. At Generation Coders we strive to be the key to obtain this most powerful weapon.</p>
       </div>
       <div class="column">
         <figure class="is-horizontal-center image is-96x96">
-            <img class="is-horizontal-center" src="assets/img/001-handshake.svg">
+            <img class="is-horizontal-center" src="{{ url_for('static', filename = 'img/001-handshake.svg')}}">
         </figure>
         <p class="subtitle has-text-black big-icon-below">Community</p>
         <p class="has-text-tertiary">A community is only as strong as its parts. With a strong and diverse education, we can all reach higher levels of satisfaction with ourselves and our community.</p>
       </div>
       <div class="column">
         <figure class="is-horizontal-center image is-96x96">
-            <img class="is-horizontal-center" src="assets/img/005-fireworks.svg">
+            <img class="is-horizontal-center" src="{{ url_for('static', filename = 'img/005-fireworks.svg')}}">
         </figure>
         <p class="subtitle has-text-black big-icon-below">Motivation</p>
         <p class="has-text-tertiary">Our primary motivation is providing opportunity for all. The rest is up to you! Whether you take the opporunity or not is all up to your levels of motivation.</p>
@@ -95,7 +68,7 @@
         <div class="column">
           <article>
               <figure class="is-horizontal-center image is-3by2">
-                <img class="is-horizontal-center has-shadow" src="assets/img/showcase/g2.jpeg">
+                <img class="is-horizontal-center has-shadow" src="{{ url_for('static', filename = 'img/showcase/g2.jpeg')}}">
               </figure>
               <div class="content is-small has-text-tertiary">
                 <p class="">HTML, CSS, GIT</p>
@@ -106,7 +79,7 @@
           <div class="column">
           <article>
               <figure class="is-horizontal-center image is-3by2">
-                <img class="is-horizontal-center has-shadow" src="assets/img/showcase/re.jpg">
+                <img class="is-horizontal-center has-shadow" src="{{ url_for('static', filename = 'img/showcase/re.jpg')}}">
               </figure>
               <div class="content is-small has-text-tertiary">
                 <p class="">HTML, CSS, GIT</p>
@@ -117,7 +90,7 @@
           <div class="column">
           <article>
               <figure class="is-horizontal-center image is-3by2">
-                <img class="is-horizontal-center has-shadow" src="assets/img/showcase/palpark.jpg">
+                <img class="is-horizontal-center has-shadow" src="{{ url_for('static', filename = 'img/showcase/palpark.jpg')}}">
               </figure>
               <div class="content is-small has-text-tertiary">
                 <p class="">HTML, CSS, GIT</p>
@@ -213,17 +186,5 @@
     </div>
   </div>
 </section>
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <p class="has-text-secondary">
-        <strong class="has-text-secondary">Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-      </p>
-    </div>
-  </div>
-</footer>
-<script src="assets/js/index.js"></script>
-  </body>
-</html>
+{% include 'footer.html' %}
+{% endblock %}

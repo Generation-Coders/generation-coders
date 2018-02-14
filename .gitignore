@@ -1,2 +1,4 @@
-o.html
-assets/.sass-cache/*
+config.cfg
+venv/*
+app/__pycache__/*
+static/.sass-cache/*
