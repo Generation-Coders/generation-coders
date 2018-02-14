@@ -21,28 +21,22 @@ $footer-background-color: $primary;
 $black: rgb(45, 49, 66);
 $body-line-height: 1.8;
 /*#1d49da !important*/
-/*.section p {
-	line-height: 1.8 !important;
-}*/
+
 .hero-foo {
 	@extend .hero;
 	background: linear-gradient(0deg,rgba(0, 61, 255,0.5),rgba(0, 61, 255,0.5)), url('img/hero.jpg');
-	background-repeat:no-repeat;
-	background-size:cover;
-	background-position:center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 	.subtitle a {
 		font-weight: 500;
 	}
 }
 .hero-foo-reflection {
 	@extend .hero;
-	background: url('img/hero.jpg');
-	background-repeat:no-repeat;
-	background-size:cover;
-	background-position:center;
-	/*.subtitle a {
-		font-weight: 500;
-	}*/
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	background-position: center !important;
 }
 .reflection-below-hero {
 	.hero-body {

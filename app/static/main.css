@@ -4,9 +4,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 /*$secondary: #f4f8ff;*/
 /*#1d49da !important*/
-/*.section p {
-	line-height: 1.8 !important;
-}*/
 .hero-foo {
   background: linear-gradient(0deg, rgba(0, 61, 255, 0.5), rgba(0, 61, 255, 0.5)), url("img/hero.jpg");
   background-repeat: no-repeat;
@@ -16,13 +13,9 @@
     font-weight: 500; }
 
 .hero-foo-reflection {
-  background: url("img/hero.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  /*.subtitle a {
-  	font-weight: 500;
-  }*/ }
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important; }
 
 .reflection-below-hero .hero-body {
   padding: 1.3rem 1.5rem 0.5rem 1.5rem !important; }
