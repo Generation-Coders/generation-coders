@@ -2,6 +2,6 @@
 config.cfg
 config.py
 venv/*
-__pycache__/*
+app/__pycache__/*
 static/.sass-cache/*
 .DS_Store
