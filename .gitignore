@@ -1,5 +1,4 @@
 .env
-config.cfg
 venv/*
 app/__pycache__/*
 static/.sass-cache/*
