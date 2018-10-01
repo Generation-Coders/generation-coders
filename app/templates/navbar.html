@@ -1,5 +1,7 @@
-<section class="hero-foo is-primary is-medium">
+<section>
 <!-- Hero head: will stick at the top -->
+
+    {##
 <div class="hero-head">
 <nav class="navbar">
   <div class="container">
@@ -17,5 +19,45 @@
     </div>
   </div>
 </nav>
+</div>
+##}
+
+    <div class="hero-head">
+    <nav class="navbar">
+        <div class="container">
+    <div id="nav">
+              <div class="container">
+      <a href="/"><img class="logo" src="{{ url_for('static', filename = 'img/Logo.jpg')}}"></a>
+              <ul class="has-text-navtext">
+      <li><div class="navbar-link is-hoverable">
+        <a href="/">
+          Home
+        </a>
+      </div></li>
+      <li><div class="navbar-link is-hoverable">
+        <a href="/about">
+          About
+        </a>
+      </div></li>
+        <li><div class="navbar-link is-hoverable">
+        <a href="/showcase">
+          Showcase
+        </a>
+      </div></li>
+        <li><div class="navbar-link is-hoverable">
+        <a href="/upcoming">
+          Upcoming
+        </a>
+      </div></li>
+        <li><div class="navbar-link is-hoverable">
+        <a href="/resources">
+          Resources
+        </a>
+      </div></li>
+              </ul>
+              </div>
+         </div>
+    </div>
+    </nav>
 </div>
 </section>
