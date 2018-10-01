@@ -6665,7 +6665,7 @@ label.panel-block {
     .hero.is-black .navbar-link,
     .is-black.hero-foo .navbar-link,
     .is-black.hero-foo-reflection .navbar-link {
-      color: rgba(255, 255, 255, 0.7); }
+       }
     .hero.is-black a.navbar-item:hover, .is-black.hero-foo a.navbar-item:hover, .is-black.hero-foo-reflection a.navbar-item:hover, .hero.is-black a.navbar-item.is-active, .is-black.hero-foo a.navbar-item.is-active, .is-black.hero-foo-reflection a.navbar-item.is-active,
     .hero.is-black .navbar-link:hover,
     .is-black.hero-foo .navbar-link:hover,
@@ -6827,7 +6827,7 @@ label.panel-block {
     .hero.is-primary .navbar-link,
     .is-primary.hero-foo .navbar-link,
     .is-primary.hero-foo-reflection .navbar-link {
-      color: rgba(255, 255, 255, 0.7); }
+       }
     .hero.is-primary a.navbar-item:hover, .is-primary.hero-foo a.navbar-item:hover, .is-primary.hero-foo-reflection a.navbar-item:hover, .hero.is-primary a.navbar-item.is-active, .is-primary.hero-foo a.navbar-item.is-active, .is-primary.hero-foo-reflection a.navbar-item.is-active,
     .hero.is-primary .navbar-link:hover,
     .is-primary.hero-foo .navbar-link:hover,
@@ -6881,7 +6881,7 @@ label.panel-block {
     .hero.is-link .navbar-link,
     .is-link.hero-foo .navbar-link,
     .is-link.hero-foo-reflection .navbar-link {
-      color: rgba(255, 255, 255, 0.7); }
+       }
     .hero.is-link a.navbar-item:hover, .is-link.hero-foo a.navbar-item:hover, .is-link.hero-foo-reflection a.navbar-item:hover, .hero.is-link a.navbar-item.is-active, .is-link.hero-foo a.navbar-item.is-active, .is-link.hero-foo-reflection a.navbar-item.is-active,
     .hero.is-link .navbar-link:hover,
     .is-link.hero-foo .navbar-link:hover,
@@ -6935,7 +6935,7 @@ label.panel-block {
     .hero.is-info .navbar-link,
     .is-info.hero-foo .navbar-link,
     .is-info.hero-foo-reflection .navbar-link {
-      color: rgba(255, 255, 255, 0.7); }
+       }
     .hero.is-info a.navbar-item:hover, .is-info.hero-foo a.navbar-item:hover, .is-info.hero-foo-reflection a.navbar-item:hover, .hero.is-info a.navbar-item.is-active, .is-info.hero-foo a.navbar-item.is-active, .is-info.hero-foo-reflection a.navbar-item.is-active,
     .hero.is-info .navbar-link:hover,
     .is-info.hero-foo .navbar-link:hover,
@@ -6989,7 +6989,7 @@ label.panel-block {
     .hero.is-success .navbar-link,
     .is-success.hero-foo .navbar-link,
     .is-success.hero-foo-reflection .navbar-link {
-      color: rgba(255, 255, 255, 0.7); }
+       }
     .hero.is-success a.navbar-item:hover, .is-success.hero-foo a.navbar-item:hover, .is-success.hero-foo-reflection a.navbar-item:hover, .hero.is-success a.navbar-item.is-active, .is-success.hero-foo a.navbar-item.is-active, .is-success.hero-foo-reflection a.navbar-item.is-active,
     .hero.is-success .navbar-link:hover,
     .is-success.hero-foo .navbar-link:hover,
@@ -7097,7 +7097,7 @@ label.panel-block {
     .hero.is-danger .navbar-link,
     .is-danger.hero-foo .navbar-link,
     .is-danger.hero-foo-reflection .navbar-link {
-      color: rgba(255, 255, 255, 0.7); }
+      }
     .hero.is-danger a.navbar-item:hover, .is-danger.hero-foo a.navbar-item:hover, .is-danger.hero-foo-reflection a.navbar-item:hover, .hero.is-danger a.navbar-item.is-active, .is-danger.hero-foo a.navbar-item.is-active, .is-danger.hero-foo-reflection a.navbar-item.is-active,
     .hero.is-danger .navbar-link:hover,
     .is-danger.hero-foo .navbar-link:hover,
@@ -7259,7 +7259,7 @@ label.panel-block {
     .hero.is-tertiary .navbar-link,
     .is-tertiary.hero-foo .navbar-link,
     .is-tertiary.hero-foo-reflection .navbar-link {
-      color: rgba(255, 255, 255, 0.7); }
+       }
     .hero.is-tertiary a.navbar-item:hover, .is-tertiary.hero-foo a.navbar-item:hover, .is-tertiary.hero-foo-reflection a.navbar-item:hover, .hero.is-tertiary a.navbar-item.is-active, .is-tertiary.hero-foo a.navbar-item.is-active, .is-tertiary.hero-foo-reflection a.navbar-item.is-active,
     .hero.is-tertiary .navbar-link:hover,
     .is-tertiary.hero-foo .navbar-link:hover,
