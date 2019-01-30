@@ -1,0 +1,49 @@
+bm1.html{% block content %}
+{% include 'base.html' %}
+{% include 'navbar.html' %}
+<section class="section is-marginless notification is-secondary">
+  <div class="container">
+    <section class="articles">
+        <div class="column is-10 is-offset-1">
+          <div class="card article">
+            <div class="card-content reflection-card">        
+            <section class="hero-foo-reflection" style="background: url('{{ url_for('static', filename = 'img/showcase/haworth.jpg')}}');">
+              <div class="hero-body">
+                <div class="container">
+                  <h1 class="title">&nbsp;</h1>
+                  <h1 class="title">&nbsp;</h1>
+                  <h2 class="subtitle">&nbsp;</h2> 
+                </div>
+              </div>
+            </section>
+            <section class="reflection-below-hero is-paddingless">
+              <div class="hero-body">
+                <div class="container">
+                  <nav class="breadcrumb is-paddingless is-marginless" aria-label="breadcrumbs">
+                    <ul>
+                      <li><a href="/showcase">Showcase</a></li>
+                      <li class="is-active"><a href="#" aria-current="page">Haworth Library</a></li>
+                    </ul>
+                  </nav>
+                  <h1 class="title">Haworth Library Workshop</h1>
+                  <h2 class="subtitle"><small>11/19/19</small></h2>
+                </div>
+              </div>
+            </section>
+          <div class="reflection-content">
+              <p>This was our very first workshop at the Haworth Library.</p>
+              <br>
+              <p>The workshop turned out to be a great success! We were able to get through the entire lesson plan fairly easily!</p>
+              <br>
+              <p>- Anand</p>
+              <a href="https://drive.google.com/open?id=1SW5nU7yr2EClG2tSWMuu6vQIEIgVax9r">Photos Link</a>
+            </div>       
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+{% include 'footer.html' %}
+{% endblock %}
+

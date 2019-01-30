@@ -1,3 +1,118 @@
+<!-- Just an image -->
+<!-- Image and text -->
+
+
+<nav class="navbar" role="navigation" aria-label="main navigation" style="position: fixed; width: 100%; left: 0; top: 0; z-index: 100; border-top: 0;">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="{{ url_for('static', filename = 'img/Logo.jpg')}}" width="56" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="/">
+        Home
+      </a>
+
+      <a class="navbar-item" href="/about">
+        About
+      </a>
+
+      <a class="navbar-item" href="/showcase">
+        Showcase
+      </a>
+
+      <a class="navbar-item" href="/upcoming">
+        Upcoming
+      </a>
+
+      <a class="navbar-item" href="/resources">
+        Resources
+      </a>
+
+      {##
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            About
+          </a>
+          <a class="navbar-item">
+            Jobs
+          </a>
+          <a class="navbar-item">
+            Contact
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            Report an issue
+          </a>
+        </div>
+      </div>
+      ##}
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+            <a class="button is-primary" href="https://drive.google.com/drive/folders/1XfJg2IINwOce31VD2p6v9V2utqdPyyWF?usp=sharing">
+              <span class="icon">
+                <i class="fas fa-download"></i>
+              </span>
+              <span>View our Lessons!</span>
+            </a>
+            <a class="button is-light" href="https://drive.google.com/drive/folders/1JfdHOWFNAxaOFu96rLWp_ZcEMQTEp3nv">
+            Event Photos
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<br>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>
+
+{##
+onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');"
+
 <section class="hero-foo is-primary">
 <!-- Hero head: will stick at the top -->
 
@@ -5,43 +120,42 @@
     <nav class="navbar">
         <div class="container">
     <div id="nav">
-              <div class="container">
-      <a href="/"><img class="logo" src="{{ url_for('static', filename = 'img/Logo.jpg')}}"></a>
-              <ul class="has-text-navtext">
-      <li><div class="navbar-link is-hoverable">
-        <a href="/">
-          Home
-        </a>
-      </div></li>
-      <li><div class="navbar-link is-hoverable">
-        <a href="/about">
-          About
-        </a>
-      </div></li>
-        <li><div class="navbar-link is-hoverable">
-        <a href="/showcase">
-          Showcase
-        </a>
-      </div></li>
-        <li><div class="navbar-link is-hoverable">
-        <a href="/upcoming">
-          Upcoming
-        </a>
-      </div></li>
-        <li><div class="navbar-link is-hoverable">
-        <a href="/resources">
-          Resources
-        </a>
-      </div></li>
-              </ul>
-              </div>
-         </div>
+        <div class="container">
+            <a href="/"><img class="logo" src="{{ url_for('static', filename = 'img/Logo.jpg')}}"></a>
+            <ul class="has-text-navtext">
+              <li><div class="navbar-link is-hoverable">
+                <a href="/">
+                  Home
+                </a>
+              </div></li>
+              <li><div class="navbar-link is-hoverable">
+                <a href="/about">
+                  About
+                </a>
+              </div></li>
+              <li><div class="navbar-link is-hoverable">
+                <a href="/showcase">
+                  Showcase
+                </a>
+              </div></li>
+              <li><div class="navbar-link is-hoverable">
+                <a href="/upcoming">
+                  Upcoming
+                </a>
+              </div></li>
+              <li><div class="navbar-link is-hoverable">
+                <a href="/resources">
+                  Resources
+                </a>
+              </div></li>
+            </ul>
+        </div>
+    </div>
     </div>
     </nav>
 </div>
 </section>
 
-{##
 <div class="hero-head">
 <nav class="navbar">
   <div class="container">

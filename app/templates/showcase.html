@@ -6,7 +6,55 @@
     <h2 class="title has-text-centered is-size-3 has-text-primary">What we've been up to:</h2>
     <p>As we're teaching, we learn and grow and have new experiences at each place we go to. With each new location, we're writing a reflection as a way to store and share our memories. Feel free to check them out!</p>
     <br>
+    <p>For some photos of our past events, click <a href="https://drive.google.com/drive/folders/1JfdHOWFNAxaOFu96rLWp_ZcEMQTEp3nv">here</a>.</p>
+    <br>
     <div class="columns is-tablet has-text-centered">
+        <div class="column is-one-third">
+        <div class="card">
+          <div class="card-image" style="background: linear-gradient(0deg,rgba(0, 61, 255,0.5),rgba(0, 61, 255,0.5)), url('{{ url_for('static', filename = 'img/showcase/fairlawn.jpg')}}');background-repeat:no-repeat;background-size:cover;background-position:center;">
+            <div class="card-image-content">
+            <p class="subtitle has-text-centered has-text-white">Fair Lawn Library</p>
+          </div>
+          </div>
+          <div class="card-content card-overlay">
+            <div class="content">
+            <nav class="level is-mobile">
+              <div class="level-left">
+                <div class="level-item">
+                  <p><time class="is-small">1/29/19</time>, <time class="is-small">1/22/19</time></p>
+                </div>
+              </div>
+              <div class="level-right">
+                <a href="{{ url_for('reflections', place='fairlawn') }}" class="level-item button is-small is-primary is-marginless">More</a>
+              </div>
+            </nav>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="card">
+          <div class="card-image" style="background: linear-gradient(0deg,rgba(0, 61, 255,0.5),rgba(0, 61, 255,0.5)), url('{{ url_for('static', filename = 'img/showcase/haworth.jpg')}}');background-repeat:no-repeat;background-size:cover;background-position:center;">
+            <div class="card-image-content">
+            <p class="subtitle has-text-centered has-text-white">Haworth Library</p>
+          </div>
+          </div>
+          <div class="card-content card-overlay">
+            <div class="content">
+            <nav class="level is-mobile">
+              <div class="level-left">
+                <div class="level-item">
+                  <p><time class="is-small">1/19/19</time></p>
+                </div>
+              </div>
+              <div class="level-right">
+                <a href="{{ url_for('reflections', place='haworth') }}" class="level-item button is-small is-primary is-marginless">More</a>
+              </div>
+            </nav>
+          </div>
+          </div>
+        </div>
+      </div>
         <div class="column is-one-third">
         <div class="card">
           <div class="card-image" style="background: linear-gradient(0deg,rgba(0, 61, 255,0.5),rgba(0, 61, 255,0.5)), url('{{ url_for('static', filename = 'img/showcase/makerspace1.jpeg')}}');background-repeat:no-repeat;background-size:cover;background-position:center;">
@@ -30,6 +78,8 @@
           </div>
         </div>
       </div>
+    </div>
+        <div class="columns is-tablet has-text-centered">
       <div class="column is-one-third">
         <div class="card">
           <div class="card-image" style="background: linear-gradient(0deg,rgba(0, 61, 255,0.5),rgba(0, 61, 255,0.5)), url('{{ url_for('static', filename = 'img/showcase/g.jpg')}}');background-repeat:no-repeat;background-size:cover;background-position:center;">
@@ -76,8 +126,6 @@
           </div>
         </div>
       </div>
-    </div>
-        <div class="columns is-tablet has-text-centered">
         <div class="column is-one-third">
         <div class="card">
           <div class="card-image" style="background: linear-gradient(0deg,rgba(0, 61, 255,0.5),rgba(0, 61, 255,0.5)), url('{{ url_for('static', filename = 'img/showcase/palpark.jpg')}}');background-repeat:no-repeat;background-size:cover;background-position:center;">
@@ -101,6 +149,8 @@
           </div>
         </div>
       </div>
+    </div>
+            <div class="columns is-tablet has-text-centered">
       <div class="column is-one-third">
         <div class="card">
           <div class="card-image" style="background: linear-gradient(0deg,rgba(0, 61, 255,0.5),rgba(0, 61, 255,0.5)), url('{{ url_for('static', filename = 'img/hero.jpg')}}');background-repeat:no-repeat;background-size:cover;background-position:center;">
@@ -113,7 +163,7 @@
             <nav class="level is-mobile">
               <div class="level-left">
                 <div class="level-item">
-                  <p><time class="is-small">11/18/17</time>, <time class="is-small">11/15/17</time></p>
+                  <p><time class="is-small">12/13/18</time>, <time class="is-small">11/12/18</time>, <time class="is-small">11/18/17</time></p>
                 </div>
               </div>
               <div class="level-right">
@@ -124,9 +174,8 @@
           </div>
         </div>
       </div>
-      <div class="column is-one-third">
-      </div>
     </div>
+
   </div>
 </section>
 {% include 'footer.html' %}
