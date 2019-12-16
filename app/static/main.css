@@ -198,6 +198,14 @@ time {
   line-height: 1.5;
   font-size: 0.9rem; }
 
+.month {
+    text-align: center;
+    font-size: 3em;
+  }
+.calendar-table {
+  font-size: 17px;
+}
+
 @keyframes spinAround {
   from {
     transform: rotate(0deg); }
@@ -272,8 +280,8 @@ table {
 
 td,
 th {
-  padding: 0;
-  text-align: left; }
+  padding: 10;
+  text-align: center; }
 
 html {
   background-color: white;
@@ -372,11 +380,10 @@ pre {
     padding: 0; }
 
 table td,
-table th {
-  text-align: left;
-  vertical-align: top; }
-table th {
-  color: #363636; }
+/*table th {
+  text-align: center;
+  vertical-align: top;
+}*/
 
 .is-clearfix:after {
   clear: both;
