@@ -317,10 +317,10 @@ pre {
   font-family: monospace; }
 
 .highlight {
-  background-color: aqua;
+  background-color: yellow;
 }
 .blinking {
-  background-color: aqua;
+  background-color: yellow;
   text-decoration: solid;
   font-weight: 1000;
   animation: blinkingText 1.5s infinite;
