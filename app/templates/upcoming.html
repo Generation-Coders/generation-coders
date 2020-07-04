@@ -2,23 +2,319 @@
 {% include 'base.html' %}
 {% include 'navbar.html' %}
 <section class="section is-marginless notification is-secondary" style="padding-bottom: 120px;">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+    }
+
+    .month {
+      padding: 70px 25px;
+      width: 100%;
+      background: #003dff;
+      text-align: center;
+    }
+
+    .month ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    .month ul li {
+      color: white;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .month .prev {
+      float: left;
+      padding-top: 10px;
+    }
+
+    .month .next {
+      float: right;
+      padding-top: 10px;
+    }
+
+    .weekdays {
+      margin: 0;
+      padding: 10px 0;
+      background-color: #ddd;
+    }
+
+    .weekdays li {
+      display: inline-block;
+      width: 13.6%;
+      color: #666;
+      text-align: center;
+    }
+
+    .days {
+      padding: 10px 0;
+      background: #eee;
+      margin: 0;
+    }
+
+    .days li {
+      list-style-type: none;
+      display: inline-block;
+      width: 13.6%;
+      text-align: center;
+      margin-bottom: auto;
+      padding: 10px;
+      font-size: 20px;
+      color: #777;
+      border: 1px solid black
+    }
+
+    .days li .active {
+      padding: 5px;
+      background: #003dff;
+      color: white !important
+    }
+
+    /* Add media queries for smaller screens */
+    @media screen and (max-width:720px) {
+
+      .weekdays li,
+      .days li {
+        width: 13.1%;
+      }
+    }
+
+    @media screen and (max-width: 420px) {
+
+      .weekdays li,
+      .days li {
+        width: 12.5%;
+      }
+
+      .days li .active {
+        padding: 2px;
+      }
+    }
+
+    @media screen and (max-width: 290px) {
+
+      .weekdays li,
+      .days li {
+        width: 12.2%;
+      }
+    }
+  </style>
   <div class="container">
     <h2 class="title is-size-3 has-text-primary">Upcoming Events</h2>
-    <p class="top-blurb">In response to COVID-19, we are working on setting up online workshops to launch in the summer! Please email audkim21@bergen.org with any concerns or questions about these programs. For general queries, feel free to get in touch with us at <a href="mailto:gencodersbca@gmail.com">GenCodersBCA@gmail.com</a>! Thank you, and stay safe!</p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-                </div>
-              </div>
-            </nav>
-          </div>
-        </div>
-      </div>
+    <p class="top-blurb">In response to COVID-19, we are working on setting up online workshops to launch in the summer!
+      Please email audkim21@bergen.org with any concerns or questions about these programs. For general queries, feel
+      free to get in touch with us at <a href="mailto:gencodersbca@gmail.com">GenCodersBCA@gmail.com</a>! Thank you, and
+      stay safe!</p>
+    <div class="month">
+      <ul>
+        <!-- <li class="prev">&#10094;</li>
+        <li class="next">&#10095;</li> -->
+        <li style="font-size:45px">
+          July<br>
+          <span style="font-size:45px">2020</span>
+        </li>
+      </ul>
+    </div>
+
+    <ul class="weekdays">
+      <li>Mo</li>
+      <li>Tu</li>
+      <li>We</li>
+      <li>Th</li>
+      <li>Fr</li>
+      <li>Sa</li>
+      <li>Su</li>
+    </ul>
+
+    <ul class="days">
+      <li>28
+        <br>
+        <br>
+        <br>
+      </li>
+      <li>29
+        <br>
+        <br>
+        <br>
+      </li>
+      <li>30
+        <br>
+        <br>
+        <br>
+      </li>
+      <li>1
+        <br>
+        <br>
+        <br>
+      </li>
+      <li>2
+        <br>
+        <br>
+        <br>
+      </li>
+      <li>3
+        <br>
+        <br>
+        <br>
+      </li>
+      <li>4
+        <br>
+        <br>
+        <br>
+      </li>
+      <li>5
+        <br>
+        <br>
+        <br>
+      </li>
+      <li>6
+        <br>
+        <br>
+        <br>
+      </li>
+      <li>7
+        <br>
+        <br>
+        <br>
+      </li>
+      <li>8
+        <br>
+        <br>
+        <br>
+      </li>
+      <li>9
+        <br>
+        <br>
+        <br>
+      </li>
+      <li>10
+        <br>
+        <br>
+        <br>
+      </li>
+      <li>11
+        <br>
+        <br>
+        <br>
+      </li>
+      <li>12
+        <br>
+        <br>
+        <br>
+      </li>
+      <li>13
+        <br> Scratch
+        <br> 2:00 - 3:00 PM
+        <br> 4th grade or younger
+      </li>
+      <li>14
+        <br>
+        <br>
+        <br>
+      </li>
+      <li>15
+        <br> Python / WebDev
+        <br> 2:00-3:00 PM
+        <br> 5th-8th grade
+      </li>
+      <li>16
+        <br> Python / WebDev
+        <br> 2:00-3:00 PM
+        <br> High school
+      </li>
+      <li>17
+        <br> Java
+        <br> 2:00-3:00 PM
+        <br> Adults
+      </li>
+      <li>18
+        <br>
+        <br>
+        <br>
+      </li>
+      <li>19
+        <br>
+        <br>
+        <br>
+      </li>
+      <li>20
+        <br> Scratch
+        <br> 2:00 - 3:00 PM
+        <br> 4th grade or younger
+      </li>
+      <li>21
+        <br>
+        <br>
+        <br>
+      </li>
+      <li>22
+        <br> Python / WebDev
+        <br> 2:00-3:00 PM
+        <br> 5th-8th grade
+      </li>
+      <li>23
+        <br> Python / WebDev
+        <br> 2:00-3:00 PM
+        <br> High school
+      </li>
+      <li>24
+        <br> Java
+        <br> 2:00-3:00 PM
+        <br> Adults
+      </li>
+      <li>25
+        <br>
+        <br>
+        <br>
+      </li>
+      <li>26
+        <br>
+        <br>
+        <br>
+      </li>
+      <li>27
+        <br> Scratch
+        <br> 2:00 - 3:00 PM
+        <br> 4th grade or younger
+      </li>
+      <li>28
+        <br>
+        <br>
+        <br>
+      </li>
+      <li>29
+        <br> Python / WebDev
+        <br> 2:00-3:00 PM
+        <br> 5th-8th grade
+      </li>
+      <li>30
+        <br> Python / WebDev
+        <br> 2:00-3:00 PM
+        <br> High school
+      </li>
+      <li>31
+        <br> Java
+        <br> 2:00-3:00 PM
+        <br> Adults
+      </li>
+      <li>1
+        <br>
+        <br>
+        <br>
+      </li>
+    </ul>
+  </div>
 
 </section>
 {% include 'footer.html' %}

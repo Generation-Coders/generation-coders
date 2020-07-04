@@ -1,22 +1,30 @@
 {% block content %}
 {% include 'base.html' %}
 {% include 'navbar.html' %}
+
 <section class="hero-foo is-primary is-medium">
-<div class="hero-body">
-  <div class="container has-text-centered">
-    <h1 class="is-size-1 title">Generation Coders</h1>
-    <h2 class="is-size-4 subtitle text-light">Making technology accessible to <a href="/about">all</a> generations</h2>
+
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="is-size-1 title">Generation Coders</h1>
+      <h2 class="is-size-4 subtitle text-light">Making technology accessible to <a href="/about">all</a> generations
+      </h2>
+    </div>
   </div>
-</div>
 </section>
 <section class="section notification is-secondary">
   <div class="container">
+    <div style="background-color: yellow; font-size: 25px; text-align: center; margin-bottom: 10px;">
+      <a href="/upcoming">Check out our schedule for virtual events in summer 2020!</a>
+    </div>
     <p class="subtitle is-size-4 has-text-primary sec-sub">Who we are:</p>
     <div class="columns is-vcentered">
-      <div class="column is-two-thirds"> 
+      <div class="column is-two-thirds">
         <div class="content">
-          <p>We are a team of high school students from <a href="https://bcts.bergen.org" target="_blank">Bergen County Academies</a> dedicated to spreading Computer Science skills throughout the state.</p>
-          <p>Our mission is to be able to provide a learning opportunity in Computer Science across the state for all who are interested regardless of skill, age, or background!</p>
+          <p>We are a team of high school students from <a href="https://bcts.bergen.org" target="_blank">Bergen County
+              Academies</a> dedicated to spreading Computer Science skills throughout the state.</p>
+          <p>Our mission is to be able to provide a learning opportunity in Computer Science across the state for all
+            who are interested regardless of skill, age, or background!</p>
         </div>
         <a class="button is-primary" href="/about">
           <span class="icon is-small">
@@ -27,35 +35,39 @@
       </div>
       <div class="column">
         <figure class="image">
-            <img class="has-shadow" src="{{ url_for('static', filename = 'img/bc.png')}}">
-          </figure>
-      </div>
+          <img class="has-shadow" src="{{ url_for('static', filename = 'img/bc.png')}}">
+        </figure>
       </div>
     </div>
+  </div>
 </section>
 <section id="sec-values" class="section">
   <div class="container">
     <div class="columns has-text-centered">
       <div class="column">
         <figure class="is-horizontal-center image is-96x96">
-            <img class="is-horizontal-center" src="{{ url_for('static', filename = 'img/004-coding.svg')}}">
+          <img class="is-horizontal-center" src="{{ url_for('static', filename = 'img/004-coding.svg')}}">
         </figure>
         <p class="subtitle has-text-black big-icon-below">Education</p>
-        <p class="has-text-tertiary">We believe that education is the key to success: our primary goal is to make education as accessible as possible, and we strive to be the best teachers that we can be in all of our workshops and programs.</p>
+        <p class="has-text-tertiary">We believe that education is the key to success: our primary goal is to make
+          education as accessible as possible, and we strive to be the best teachers that we can be in all of our
+          workshops and programs.</p>
       </div>
       <div class="column">
         <figure class="is-horizontal-center image is-96x96">
-            <img class="is-horizontal-center" src="{{ url_for('static', filename = 'img/001-handshake.svg')}}">
+          <img class="is-horizontal-center" src="{{ url_for('static', filename = 'img/001-handshake.svg')}}">
         </figure>
         <p class="subtitle has-text-black big-icon-below">Community</p>
-        <p class="has-text-tertiary">We strive to create the best learning environment possible and we believe that the best way to learn is through community and partnership! </p>
+        <p class="has-text-tertiary">We strive to create the best learning environment possible and we believe that the
+          best way to learn is through community and partnership! </p>
       </div>
       <div class="column">
         <figure class="is-horizontal-center image is-96x96">
-            <img class="is-horizontal-center" src="{{ url_for('static', filename = 'img/005-fireworks.svg')}}">
+          <img class="is-horizontal-center" src="{{ url_for('static', filename = 'img/005-fireworks.svg')}}">
         </figure>
         <p class="subtitle has-text-black big-icon-below">Motivation</p>
-        <p class="has-text-tertiary">We want to make sure that you'll have the motivation, inspiration, and resources to continue programming and achieve success :)</p>
+        <p class="has-text-tertiary">We want to make sure that you'll have the motivation, inspiration, and resources to
+          continue programming and achieve success :)</p>
       </div>
     </div>
   </div>
@@ -65,87 +77,98 @@
     <h2 class="title is-size-4 has-text-primary has-text-centered sec-sub">Recent Workshops</h2>
     <br>
     <div class="columns is-tablet has-text-centered">
-        <div class="column">
-          <article>
-              <figure class="is-horizontal-center image is-3by2">
-                <img class="is-horizontal-center has-shadow" src="{{ url_for('static', filename = 'img/showcase/fairlawn.jpg')}}">
-              </figure>
-              <div class="content is-small has-text-tertiary">
-                <p class="">HTML, CSS, GIT</p>
-              </div>
-                <a href="/showcase/fairlawn">Fair Lawn Library</a>
-          </article>  
-        </div>
-          <div class="column">
-          <article>
-              <figure class="is-horizontal-center image is-3by2">
-                <img class="is-horizontal-center has-shadow" src="{{ url_for('static', filename = 'img/showcase/haworth.jpg')}}">
-              </figure>
-              <div class="content is-small has-text-tertiary">
-                <p class="">Scratch</p>
-              </div>
-                <a href="/showcase/haworth">Haworth Library</a>
-          </article>
-        </div>
-          <div class="column">
-          <article>
-              <figure class="is-horizontal-center image is-3by2">
-                <img class="is-horizontal-center has-shadow" src="{{ url_for('static', filename = 'img/showcase/g2.jpeg')}}">
-              </figure>
-              <div class="content is-small has-text-tertiary">
-                <p class="">HTML, CSS, GIT</p>
-              </div>
-                <a href="/showcase/bm1">Bergen Makerspace</a>
-          </article>
-        </div>
+      <div class="column">
+        <article>
+          <figure class="is-horizontal-center image is-3by2">
+            <img class="is-horizontal-center has-shadow"
+              src="{{ url_for('static', filename = 'img/showcase/fairlawn.jpg')}}">
+          </figure>
+          <div class="content is-small has-text-tertiary">
+            <p class="">HTML, CSS, GIT</p>
+          </div>
+          <a href="/showcase/fairlawn">Fair Lawn Library</a>
+        </article>
       </div>
-      <a class="button is-primary is-outlined is-pulled-right" href="/showcase">
-          <span>View All</span>
-           <span class="icon is-small">
-            <i class="fas fa-arrow-right"></i>
-          </span>
-      </a>
-      <br>
+      <div class="column">
+        <article>
+          <figure class="is-horizontal-center image is-3by2">
+            <img class="is-horizontal-center has-shadow"
+              src="{{ url_for('static', filename = 'img/showcase/haworth.jpg')}}">
+          </figure>
+          <div class="content is-small has-text-tertiary">
+            <p class="">Scratch</p>
+          </div>
+          <a href="/showcase/haworth">Haworth Library</a>
+        </article>
+      </div>
+      <div class="column">
+        <article>
+          <figure class="is-horizontal-center image is-3by2">
+            <img class="is-horizontal-center has-shadow"
+              src="{{ url_for('static', filename = 'img/showcase/g2.jpeg')}}">
+          </figure>
+          <div class="content is-small has-text-tertiary">
+            <p class="">HTML, CSS, GIT</p>
+          </div>
+          <a href="/showcase/bm1">Bergen Makerspace</a>
+        </article>
+      </div>
     </div>
+    <a class="button is-primary is-outlined is-pulled-right" href="/showcase">
+      <span>View All</span>
+      <span class="icon is-small">
+        <i class="fas fa-arrow-right"></i>
+      </span>
+    </a>
+    <br>
+  </div>
 </section>
 <section class="section">
   <div class="container">
     <div class="columns is-mobile has-text-centered">
       <div class="column is-three-fifths is-offset-one-fifth">
-       <!--  <p class="subtitle has-text-tertiary">On our workshops:</p> -->
-       <h2 class="title is-size-4 has-text-primary sec-sub">Testimonials</h2>
+        <!--  <p class="subtitle has-text-tertiary">On our workshops:</p> -->
+        <h2 class="title is-size-4 has-text-primary sec-sub">Testimonials</h2>
         <div id="q1" class="slider active">
           <div class="quote-slide">
             <div class="content">
-              <p class="is-size-5 has-text-tertiary text-light">"I’m a 4th grader and I recently took “Code - Build your own website” class taught by the Bergen Academies students.  It was a great class.  The teachers are absolutely amazingly helpful and very knowledgeable!  The class is very interesting for students that are interested in coding.  In the class I learned how to code in not one, but two coding languages – HTML and CSS.  I can sit down and code a website right now if I wanted!"</p>
+              <p class="is-size-5 has-text-tertiary text-light">"I’m a 4th grader and I recently took “Code - Build your
+                own website” class taught by the Bergen Academies students. It was a great class. The teachers are
+                absolutely amazingly helpful and very knowledgeable! The class is very interesting for students that are
+                interested in coding. In the class I learned how to code in not one, but two coding languages – HTML and
+                CSS. I can sit down and code a website right now if I wanted!"</p>
               <cite class="has-text-tertiary is-size-5">— Jase Estrin (9 years old)</cite>
             </div>
           </div>
         </div>
-         <div id="q2" class="slider">
+        <div id="q2" class="slider">
           <div class="quote-slide">
             <div class="content">
-              <p class="is-size-5 has-text-tertiary text-light">"Danny had a wonderful time!  He came home so happy, going  on about the animation he coded in Scratch.  It seems he has a new love for coding and technology."</p>
+              <p class="is-size-5 has-text-tertiary text-light">"Danny had a wonderful time! He came home so happy,
+                going on about the animation he coded in Scratch. It seems he has a new love for coding and technology."
+              </p>
               <cite class="has-text-tertiary is-size-5">— Marie Johnson (parent)</cite>
             </div>
           </div>
         </div>
-         <div id="q3" class="slider">
+        <div id="q3" class="slider">
           <div class="quote-slide">
             <div class="content">
-              <p class="is-size-5 has-text-tertiary text-light">"I learned so much from Anand and the rest of the Generation Coders club.  These are valuable skills that we are not taught in our normal middle schools.  I hope they come back to our library and teach again."</p>
+              <p class="is-size-5 has-text-tertiary text-light">"I learned so much from Anand and the rest of the
+                Generation Coders club. These are valuable skills that we are not taught in our normal middle schools. I
+                hope they come back to our library and teach again."</p>
               <cite class="has-text-tertiary is-size-5">— Anthony Kim (11 years old) </cite>
             </div>
           </div>
         </div>
         <div>
-        <br>
-        <span id="d1" class="dot active" onclick="changeQuote('q1')"></span> 
-        <span id="d2" class="dot" onclick="changeQuote('q2')"></span> 
-        <span id="d3" class="dot" onclick="changeQuote('q3')"></span> 
+          <br>
+          <span id="d1" class="dot active" onclick="changeQuote('q1')"></span>
+          <span id="d2" class="dot" onclick="changeQuote('q2')"></span>
+          <span id="d3" class="dot" onclick="changeQuote('q3')"></span>
+        </div>
       </div>
-      </div>
-    </div> 
+    </div>
   </div>
 </section>
 <section class="section notification is-marginless is-secondary">
@@ -162,7 +185,7 @@
           <a href="https://www.instagram.com/bca_generationcoders"><small>@bca_generationcoders</small></a>
         </div>
       </div>
-      <div class="column is-one-third"> 
+      <div class="column is-one-third">
         <div class="notification is-white has-light-shadow">
           <div class="drop-us-contact">
             <p>Email</p>
